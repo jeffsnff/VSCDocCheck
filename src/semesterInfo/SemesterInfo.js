@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { MDBContainer, MDBRow } from 'mdbreact'
 import Info from '../info/Info.js'
+import ChapterQuestions from '../chapterQuestions/ChapterQuestions.js'
 
 function SemesterInfo() {
   const initState = { semester: '', year: '', initials: '' }
+  const initChap = { chapter: ''}
   const [info, setInfo] = useState(true)
   const [ userInfo, setUserInfo ] = useState(initState)
+  const [chapter, setChapter] = useState(initChap)
 
   const onChange = e => {
     const { name, value } = e.target
@@ -13,22 +16,42 @@ function SemesterInfo() {
     sessionStorage.setItem([name], [value])
   }
 
-  const onSubmit = e => {
-    e.preventDefault()
+  // const onSubmit = e => {
+  //   e.preventDefault()
+  //   console.log(e.target)
 
-  }
+  // }
 
   useEffect( () => {
     const localSemester = sessionStorage.getItem('semester')
     const localYear = sessionStorage.getItem('year')
     const localInitials = sessionStorage.getItem('initials')
-    setUserInfo(prevInfo => ({...prevInfo, semester: localSemester, year: localYear, initials: localInitials}))
+    setUserInfo(prevInfo => ({
+        ...prevInfo, 
+        semester: localSemester, 
+        year: localYear, 
+        initials: localInitials
+      })
+    )
   }, [])
 
   const chapterSelected = (e) => {
     e.preventDefault()
-    setInfo(prevInfo => !prevInfo)
+    if(info){
+      setInfo(prevInfo => !prevInfo)
+    }
+    
+    const { value, name } = e.target
+    setChapter(prevChapter => ({
+        ...prevChapter, 
+        [name]: value
+      })
+    )
+
+
   }
+  // console.log(chapter)
+
   return(
     <MDBContainer>
       <MDBRow>
@@ -55,16 +78,25 @@ function SemesterInfo() {
           onChange={onChange}
           />
           <>
-            <button onClick={chapterSelected }>Chapter 31</button>
-            <button>Chapter 33</button>
-            <button>Chapter 1606</button>
-            <button>Chapter 30</button>
-            <button>Chapter 33 TOE</button>
+            <button name='chapter' value='31' onClick={chapterSelected }>Chapter 31</button>
+            <button name='chapter' value='33' onClick={chapterSelected }>Chapter 33</button>
+            <button name='chapter' value='1606' onClick={chapterSelected }>Chapter 1606</button>
+            <button name='chapter' value='30' onClick={chapterSelected }>Chapter 30</button>
+            <button name='chapter' value='toe' onClick={chapterSelected }>Chapter 33 TOE</button>
           </>
         </form>
       </MDBRow>
 
-      { info ? <Info /> : null }
+      { 
+        info ? 
+            <Info
+              
+            /> 
+          : 
+            <ChapterQuestions
+              chapterInfo={chapter.chapter}
+            />
+      }
       
 
     </MDBContainer>

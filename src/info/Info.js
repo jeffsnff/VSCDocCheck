@@ -4,7 +4,7 @@ import { MDBContainer } from 'mdbreact'
 function Info(){
   return(
     <MDBContainer>
-      Info Block
+      <div>This is about Doc Checks</div>
     </MDBContainer>
   )
 }
