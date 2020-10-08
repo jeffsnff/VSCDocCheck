@@ -1,0 +1,10 @@
+li {
+  list-style-type: disc;
+}
+.highLight {
+  background-color: yellow;
+}
+.email{
+  text-decoration: underline;
+  color: blue;
+}

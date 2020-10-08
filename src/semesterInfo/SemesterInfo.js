@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { MDBContainer, MDBRow } from 'mdbreact'
+import { MDBCol, MDBContainer, MDBRow } from 'mdbreact'
 import Info from '../info/Info.js'
 import ChapterQuestions from '../chapterQuestions/ChapterQuestions.js'
 
@@ -54,38 +54,42 @@ function SemesterInfo() {
 
   return(
     <MDBContainer>
-      <MDBRow>
-        <form>
-          <input 
-          type='text' 
-          name='semester' 
-          placeholder="Semester"
-          value={userInfo.semester}
-          onChange={onChange}
-          />
-          <input 
-          type='text' 
-          name='year' 
-          placeholder='Year'
-          value={userInfo.year}
-          onChange={onChange}
-          />
-          <input 
-          type='text' 
-          name='initials' 
-          placeholder='Initials'
-          value={userInfo.initials}
-          onChange={onChange}
-          />
-          <>
-            <button name='chapter' value='31' onClick={chapterSelected }>Chapter 31</button>
-            <button name='chapter' value='33' onClick={chapterSelected }>Chapter 33</button>
-            <button name='chapter' value='1606' onClick={chapterSelected }>Chapter 1606</button>
-            <button name='chapter' value='30' onClick={chapterSelected }>Chapter 30</button>
-            <button name='chapter' value='toe' onClick={chapterSelected }>Chapter 33 TOE</button>
-          </>
-        </form>
-      </MDBRow>
+      <MDBCol style={{border: '1px solid green'}}>
+        <MDBRow className='flex-center' >
+          <form>
+            <input 
+            type='text' 
+            name='semester' 
+            placeholder="Semester"
+            value={userInfo.semester}
+            onChange={onChange}
+            />
+            <input 
+            type='text' 
+            name='year' 
+            placeholder='Year'
+            value={userInfo.year}
+            onChange={onChange}
+            />
+            <input 
+            type='text' 
+            name='initials' 
+            placeholder='Initials'
+            value={userInfo.initials}
+            onChange={onChange}
+            />
+          </form>
+        </MDBRow>
+        <MDBRow className="d-flex justify-content-around">
+          <button name='chapter' value='31' onClick={chapterSelected }>Chapter 31</button>
+          <button name='chapter' value='33' onClick={chapterSelected }>Chapter 33</button>
+          <button name='chapter' value='1606' onClick={chapterSelected }>Chapter 1606</button>
+          <button name='chapter' value='30' onClick={chapterSelected }>Chapter 30</button>
+          <button name='chapter' value='toe' onClick={chapterSelected }>Chapter 33 TOE</button>
+        </MDBRow>
+          
+        
+      </MDBCol>
 
       { 
         info ? 
