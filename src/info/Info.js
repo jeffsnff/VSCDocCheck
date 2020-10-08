@@ -5,7 +5,7 @@ function Info(){
   return(
     <MDBContainer>
       <div>
-        <ul class="fa-ul">
+        <ul>
           <li>Check every student’s account to make sure we have all documents needed- list in note what is missing </li>
           <li>This will be an ongoing task - Check the Under Review tab every day multiple times a day <highlight className='highLight'>(no more than 20 should be in Under Review at once)</highlight></li>
           <li>Please make sure you organize the list by submit date, and do the document checks on a first-come, first serve basis.</li>

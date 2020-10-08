@@ -37,6 +37,7 @@ function SemesterInfo() {
 
   const chapterSelected = (e) => {
     e.preventDefault()
+    
     if(info){
       setInfo(prevInfo => !prevInfo)
     }
@@ -56,24 +57,28 @@ function SemesterInfo() {
     <MDBContainer>
       <MDBCol style={{border: '1px solid green'}}>
         <MDBRow className='flex-center' >
-          <form>
+          <form className="d-flex justify-content-center flex-md-row">
             <input 
             type='text' 
             name='semester' 
             placeholder="Semester"
+            className="form-control w-25 p-3"
             value={userInfo.semester}
             onChange={onChange}
+            required
             />
             <input 
             type='text' 
             name='year' 
             placeholder='Year'
+            className="form-control w-25 p-3"
             value={userInfo.year}
             onChange={onChange}
             />
             <input 
             type='text' 
-            name='initials' 
+            name='initials'
+            className="form-control w-25 p-3" 
             placeholder='Initials'
             value={userInfo.initials}
             onChange={onChange}
