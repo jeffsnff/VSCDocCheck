@@ -4,10 +4,10 @@ import Info from '../info/Info.js'
 import ChapterQuestions from '../chapterQuestions/ChapterQuestions.js'
 
 function SemesterInfo() {
-  const initState = { semester: '', year: '', initials: '' }
+  const initUser = { semester: '', year: '', initials: '' }
   const initChap = { chapter: ''}
   const [info, setInfo] = useState(true)
-  const [ userInfo, setUserInfo ] = useState(initState)
+  const [ userInfo, setUserInfo ] = useState(initUser)
   const [chapter, setChapter] = useState(initChap)
 
   const onChange = e => {
@@ -21,6 +21,7 @@ function SemesterInfo() {
   //   console.log(e.target)
 
   // }
+  
 
   useEffect( () => {
     const localSemester = sessionStorage.getItem('semester')
@@ -85,13 +86,16 @@ function SemesterInfo() {
             />
           </form>
         </MDBRow>
-        <MDBRow className="d-flex justify-content-around">
+      
+          <MDBRow className="d-flex justify-content-around">
           <button name='chapter' value='31' onClick={chapterSelected }>Chapter 31</button>
           <button name='chapter' value='33' onClick={chapterSelected }>Chapter 33</button>
           <button name='chapter' value='1606' onClick={chapterSelected }>Chapter 1606</button>
           <button name='chapter' value='30' onClick={chapterSelected }>Chapter 30</button>
           <button name='chapter' value='toe' onClick={chapterSelected }>Chapter 33 TOE</button>
         </MDBRow>
+        
+        
           
         
       </MDBCol>
@@ -101,10 +105,12 @@ function SemesterInfo() {
             <Info
               
             /> 
-          : 
-            <ChapterQuestions
-              chapterInfo={chapter.chapter}
-            />
+          : <MDBContainer>
+              <ChapterQuestions
+                chapterInfo={chapter.chapter}
+              />
+            </MDBContainer>
+            
       }
       
 
