@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import JST from '../responses/JST.js'
+import Response from '../responses/Response.js'
 
 function Chapter31(props){
 
@@ -51,7 +51,7 @@ function Chapter31(props){
       <div>
         {
           toggle ? 
-            <JST
+            <Response
             jst={thing.jst}
             collegeCredit={thing.collegeCredit}
             residency={thing.residency}
