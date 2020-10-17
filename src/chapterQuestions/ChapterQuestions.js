@@ -13,7 +13,11 @@ function ChapterQuestions(props) {
 
   function chapterRender(){
     if(chapterInfo === '31'){
-      return <Chapter31 />
+      return <Chapter31 
+                year={props.year}
+                initials={props.initials}
+                semester={props.semester}
+              />
     }else if(chapterInfo === '33'){
       return <Chapter33 />
     }else if(chapterInfo === '1606'){

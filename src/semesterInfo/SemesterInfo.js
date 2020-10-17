@@ -108,6 +108,9 @@ function SemesterInfo() {
           : <MDBContainer>
               <ChapterQuestions
                 chapterInfo={chapter.chapter}
+                year={userInfo.year}
+                semester={userInfo.semester}
+                initials={userInfo.initials}
               />
             </MDBContainer>
             
