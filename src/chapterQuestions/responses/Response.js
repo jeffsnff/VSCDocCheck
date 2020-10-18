@@ -9,7 +9,9 @@ function Response(props){
       good: `all documentation on file. Major matches WT- Moved to ${semester} ${year} `,
       bad: `Stu missing`,
       jst: `JST / CCAF`,
-      residency: `is non Resident`
+      residency: `is non Resident called to establish resident`,
+      call: `called stu`,
+      email: `requested via email imaged`
     },
     emails : {
       subject: `URGENT: Missing Documentation for ${semester} ${year} VA Education Benefits`,
@@ -29,11 +31,11 @@ function Response(props){
   
   let note
   let email
-  if(jst !== false && residency !== false && majorMatch !== false){
+  if(jst !== false && residency !== false && majorMatch !== false && collegeCredit !== false) {
     note = response.notes.good
   }
   if(jst === false){
-    note = response.notes.bad + ' ' + response.notes.jst
+    note = response.notes.bad + ' ' + response.notes.jst + ' ' + response.notes.email
     email = response.emails.jst
   }
   if(residency === false){
