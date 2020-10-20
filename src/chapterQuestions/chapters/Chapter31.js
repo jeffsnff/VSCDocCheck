@@ -22,9 +22,12 @@ function Chapter31(props){
 
   const handleSubmit = e => {
     e.preventDefault()
-    setToggle(prevToggle => !prevToggle)
-    
+    setToggle(true)
+  }
 
+  const resetSelection = () => {
+    setThing(initState)
+    setToggle(false)
   }
 
 
@@ -47,7 +50,9 @@ function Chapter31(props){
         <label>Major matches Wolverine Track</label>
 
         <button>Submit</button>
+        
       </form>
+      <button onClick={() => resetSelection()}>Reset</button>
       <div>
         {
           toggle ? 

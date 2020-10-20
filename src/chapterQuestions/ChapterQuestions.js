@@ -19,15 +19,35 @@ function ChapterQuestions(props) {
                 semester={props.semester}
               />
     }else if(chapterInfo === '33'){
-      return <Chapter33 />
+      return <Chapter33 
+                year={props.year}
+                initials={props.initials}
+                semester={props.semester}
+              />
     }else if(chapterInfo === '1606'){
-      return <Chapter1606 />
+      return <Chapter1606 
+                year={props.year}
+                initials={props.initials}
+                semester={props.semester}
+              />
     }else if(chapterInfo === '35'){
-      return <Chapter35 />
+      return <Chapter35
+                year={props.year}
+                initials={props.initials}
+                semester={props.semester}
+            />
     }else if(chapterInfo === 'toe'){
-      return <ChapterToe />
+      return <ChapterToe 
+              year={props.year}
+              initials={props.initials}
+              semester={props.semester}
+            />
     }else if(chapterInfo === '30'){
-      return <Chapter30 />
+      return <Chapter30 
+                year={props.year}
+                initials={props.initials}
+                semester={props.semester}
+            />
     }
   }
   
