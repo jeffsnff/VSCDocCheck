@@ -1,6 +1,10 @@
 li {
   list-style-type: disc;
 }
+.hey{
+  list-style-type: decimal;
+  list-style-position: inside;
+}
 .highLight {
   background-color: yellow;
 }

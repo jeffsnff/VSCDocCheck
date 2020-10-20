@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import JST from '../responses/JST.js'
+import Response from '../responses/Response.js'
 
 function Chapter31(props){
 
@@ -22,9 +22,12 @@ function Chapter31(props){
 
   const handleSubmit = e => {
     e.preventDefault()
-    setToggle(prevToggle => !prevToggle)
-    
+    setToggle(true)
+  }
 
+  const resetSelection = () => {
+    setThing(initState)
+    setToggle(false)
   }
 
 
@@ -47,11 +50,13 @@ function Chapter31(props){
         <label>Major matches Wolverine Track</label>
 
         <button>Submit</button>
+        
       </form>
+      <button onClick={() => resetSelection()}>Reset</button>
       <div>
         {
           toggle ? 
-            <JST
+            <Response
             jst={thing.jst}
             collegeCredit={thing.collegeCredit}
             residency={thing.residency}
