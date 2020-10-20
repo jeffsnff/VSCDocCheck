@@ -83,7 +83,9 @@ function SemesterInfo() {
             placeholder='Initials'
             value={userInfo.initials}
             onChange={onChange}
+            required
             />
+            
           </form>
         </MDBRow>
       
