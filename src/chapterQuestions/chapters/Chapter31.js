@@ -35,20 +35,25 @@ function Chapter31(props){
     <div>
       <h1>Chapter 31</h1>
       <form onSubmit={handleSubmit}>
-
-        <input id='jst' type='checkbox' checked={thing.jst} onChange={handleChange}></input>
-        <label>Joint Service Transcripts / Military Credit</label>
-
-        <input id='collegeCredit' type='checkbox' checked={thing.collegeCredit} onChange={handleChange}></input>
-        <label>College Credit if Applicable</label>
-
-        
-        <input id='residency' type='checkbox' checked={thing.residency} onChange={handleChange}></input>
-        <label>Residency</label>
-        
-        <input id='majorMatch' type='checkbox' checked={thing.majorMatch} onChange={handleChange}></input>
-        <label>Major matches Wolverine Track</label>
-
+        <div className='d-flex flex-column'>
+          <div>
+            <input id='jst' type='checkbox' checked={thing.jst} onChange={handleChange}></input>
+          <label>Joint Service Transcripts / Military Credit</label>
+          </div>
+          
+          {/* <div>
+            <input id='collegeCredit' type='checkbox' checked={thing.collegeCredit} onChange={handleChange}></input>
+            <label>College Credit if Applicable</label>
+          </div> */}
+          <div>
+            <input id='residency' type='checkbox' checked={thing.residency} onChange={handleChange}></input>
+          <label>Residency</label>
+          </div>
+          <div>
+            <input id='majorMatch' type='checkbox' checked={thing.majorMatch} onChange={handleChange}></input>
+            <label>Major matches Wolverine Track</label>
+          </div>
+        </div>
         <button>Submit</button>
         
       </form>

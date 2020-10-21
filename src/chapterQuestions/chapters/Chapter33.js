@@ -37,25 +37,32 @@ function Chapter33(props){
     <div>
       <h1>Chapter 33</h1>
       <form onSubmit={handleSubmit}>
-
-        <input id='certElg' type='checkbox' checked={thing.certElg} onChange={handleChange}></input>
-        <label>Certificate of Eligibility</label>
-
-        <input id='jst' type='checkbox' checked={thing.jst} onChange={handleChange}></input>
-        <label>Joint Service Transcripts / Military Credit</label>
-
-        <input id='collegeCredit' type='checkbox' checked={thing.collegeCredit} onChange={handleChange}></input>
-        <label>College Credit if Applicable</label>
+        <div>
+          <input id='certElg' type='checkbox' checked={thing.certElg} onChange={handleChange}></input>
+          <label>Certificate of Eligibility</label>
+        </div>
+        <div>
+          <input id='jst' type='checkbox' checked={thing.jst} onChange={handleChange}></input>
+          <label>Joint Service Transcripts / Military Credit</label>
+        </div>
+        <div>
+          <input id='residency' type='checkbox' checked={thing.residency} onChange={handleChange}></input>
+          <label>Residency</label>
+        </div>
+        <div>
+          <input id='majorMatch' type='checkbox' checked={thing.majorMatch} onChange={handleChange}></input>
+          <label>Major matches Wolverine Track</label>
+        </div>
+        
 
         
-        <input id='residency' type='checkbox' checked={thing.residency} onChange={handleChange}></input>
-        <label>Residency</label>
 
-        <input id='kicker' type='checkbox' checked={thing.kicker} onChange={handleChange}></input>
-        <label>Kicker Contract</label>
         
-        <input id='majorMatch' type='checkbox' checked={thing.majorMatch} onChange={handleChange}></input>
-        <label>Major matches Wolverine Track</label>
+        
+
+        
+        
+        
 
         <button>Submit</button>
       </form>
