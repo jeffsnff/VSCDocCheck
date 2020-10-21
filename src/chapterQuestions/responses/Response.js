@@ -13,6 +13,7 @@ function Response(props){
     coeResident: `Document check - missing COE & non-Resident. Emailed Stu to request COE and instate resident. Majors matches WT - moved to ${semester} ${year} prepped to cert. - ${initials}`,
     jstCoeResident: `Document check - missing JST, COE & non-Resident. Emailed Stu to request JST, COE and instate resident. Majors matches WT - moved to ${semester} ${year} prepped to cert. - ${initials}`,
     wtMatch: `Document check - WT does not match to degree on Snapshot. Informed stu via email to fill out a 1995 form. moved to awaiting information - ${initials}`,
+    residentWT: `Document Check - WT does not match & Stu is non-resident. Emailed stu about filling out 1995 form as well as contacting Resident office. Moved to Awaiting Information - ${initials}`,
     allDocs: `Document check- all documentation on file. Major matches WT- moved to ${semester} ${year} prepped for cert. - ${initials}`
   }
   const jstResponse = 
@@ -96,7 +97,15 @@ function Response(props){
     const wolvrineTrack = 
     <div>
       <p>Hello [Student Name]</p>
-      <p>They need to fill out a 1995 form</p>
+      <p>I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a>put link here</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.</p> 
+      <p>Respectivly,</p>
+    </div>
+
+    const residencyWT =
+    <div>
+      <p>Hello [ Student Name ]</p>
+      <p>I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a>put link here</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.</p>
+      <p>I also noticed that you are not listed as a Utah resident. Please contact the residency office as soon as possible to work to establish Utah Residency and be charged in-state tuition rates. They can be reached at 801-863-8706 or <a>residency@uvu.edu.</a>  </p>
       <p>Respectivly,</p>
     </div>
   
@@ -107,6 +116,9 @@ function Response(props){
     note = noteResponse.allDocs
   }else if(jst !== false && residency !== false && majorMatch !== false && collegeCredit !== false) {
     note = noteResponse.allDocs
+  }else if(majorMatch === false && residency === false){
+    note = noteResponse.residentWT
+    email = residencyWT
   }else if(jst === false && certElg === false){
     note = noteResponse.jstCOE
     email = jstCOEresponse
