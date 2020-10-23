@@ -3,6 +3,8 @@ import React from 'react'
 function Response(props){
 
   const { jst, residency, collegeCredit, majorMatch, certElg, initials, semester, year } = props
+  const date = Date.now();
+  const today = (new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit'}).format(date))
 
   const noteResponse = {
     jst: `Document check- missing JST. Requested from stu by email-imaged. Major matches WT- moved to ${semester} ${year} prepped for cert. - ${initials}`,
@@ -297,11 +299,13 @@ function Response(props){
     email = wolvrineTrack
   }
 
+  
+
   return(
     <div>
       <div>
         <h4>Note</h4>
-        {note}
+        {today} {note}
       </div>
       <div>
         <h4>Email</h4>
