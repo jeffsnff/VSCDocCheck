@@ -36,22 +36,22 @@ function Chapter31(props){
       <h1>Chapter 31</h1>
       <form onSubmit={handleSubmit}>
         <div className='d-flex flex-column'>
-          <div>
-            <input id='jst' type='checkbox' checked={thing.jst} onChange={handleChange}></input>
-          <label for='jst'>Joint Service Transcripts / Military Credit</label>
+          <div className="custom-control custom-checkbox checkbox-xl">
+            <input className="custom-control-input" id='jst' type='checkbox' checked={thing.jst} onChange={handleChange}></input>
+            <label className="custom-control-label" for='jst'>Joint Service Transcripts / Military Credit</label>
           </div>
           
           {/* <div>
             <input id='collegeCredit' type='checkbox' checked={thing.collegeCredit} onChange={handleChange}></input>
             <label>College Credit if Applicable</label>
           </div> */}
-          <div>
-            <input id='residency' type='checkbox' checked={thing.residency} onChange={handleChange}></input>
-            <label for='residency'>Residency</label>
+          <div className="custom-control custom-checkbox checkbox-xl">
+            <input className="custom-control-input" id='residency' type='checkbox' checked={thing.residency} onChange={handleChange}></input>
+            <label className="custom-control-label" for='residency'>Residency</label>
           </div>
-          <div>
-            <input id='majorMatch' type='checkbox' checked={thing.majorMatch} onChange={handleChange}></input>
-            <label for='majorMatch'>Major matches Wolverine Track</label>
+          <div className="custom-control custom-checkbox checkbox-xl">
+            <input className="custom-control-input" id='majorMatch' type='checkbox' checked={thing.majorMatch} onChange={handleChange}></input>
+            <label className="custom-control-label" for='majorMatch'>Major matches Wolverine Track</label>
           </div>
         </div>
         <button>Submit</button>

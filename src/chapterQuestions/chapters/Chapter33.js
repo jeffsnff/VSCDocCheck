@@ -37,21 +37,21 @@ function Chapter33(props){
     <div>
       <h1>Chapter 33 & 1606 & 30</h1>
       <form onSubmit={handleSubmit}>
-        <div>
-          <input id='certElg' type='checkbox' checked={thing.certElg} onChange={handleChange}></input>
-          <label for='certElg'>Certificate of Eligibility</label>
+        <div className="custom-control custom-checkbox checkbox-xl">
+          <input className="custom-control-input" id='certElg' type='checkbox' checked={thing.certElg} onChange={handleChange}></input>
+          <label className="custom-control-label" for='certElg'>Certificate of Eligibility</label>
         </div>
-        <div>
-          <input id='jst' type='checkbox' checked={thing.jst} onChange={handleChange}></input>
-          <label for='jst'>Joint Service Transcripts / Military Credit</label>
+        <div className="custom-control custom-checkbox checkbox-xl">
+          <input className="custom-control-input" id='jst' type='checkbox' checked={thing.jst} onChange={handleChange}></input>
+          <label className="custom-control-label" for='jst'>Joint Service Transcripts / Military Credit</label>
         </div>
-        <div>
-          <input id='residency' type='checkbox' checked={thing.residency} onChange={handleChange}></input>
-          <label for='residency'>Residency</label>
+        <div className="custom-control custom-checkbox checkbox-xl">
+          <input className="custom-control-input" id='residency' type='checkbox' checked={thing.residency} onChange={handleChange}></input>
+          <label className="custom-control-label" for='residency'>Residency</label>
         </div>
-        <div>
-          <input id='majorMatch' type='checkbox' checked={thing.majorMatch} onChange={handleChange}></input>
-          <label for='majorMatch' >Major matches Wolverine Track</label>
+        <div className="custom-control custom-checkbox checkbox-xl">
+          <input className="custom-control-input" id='majorMatch' type='checkbox' checked={thing.majorMatch} onChange={handleChange}></input>
+          <label className="custom-control-label" for='majorMatch' >Major matches Wolverine Track</label>
         </div>
         
 
