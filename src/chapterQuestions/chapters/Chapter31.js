@@ -38,7 +38,7 @@ function Chapter31(props){
         <div className='d-flex flex-column'>
           <div>
             <input id='jst' type='checkbox' checked={thing.jst} onChange={handleChange}></input>
-          <label>Joint Service Transcripts / Military Credit</label>
+          <label for='jst'>Joint Service Transcripts / Military Credit</label>
           </div>
           
           {/* <div>
@@ -47,11 +47,11 @@ function Chapter31(props){
           </div> */}
           <div>
             <input id='residency' type='checkbox' checked={thing.residency} onChange={handleChange}></input>
-          <label>Residency</label>
+            <label for='residency'>Residency</label>
           </div>
           <div>
             <input id='majorMatch' type='checkbox' checked={thing.majorMatch} onChange={handleChange}></input>
-            <label>Major matches Wolverine Track</label>
+            <label for='majorMatch'>Major matches Wolverine Track</label>
           </div>
         </div>
         <button>Submit</button>

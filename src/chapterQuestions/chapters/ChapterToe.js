@@ -39,7 +39,7 @@ function ChapterTOE(props){
       <form onSubmit={handleSubmit}>
         <div>
           <input id='certElg' type='checkbox' checked={thing.certElg} onChange={handleChange}></input>
-          <label>Certificate of Eligibility</label>
+          <label for='certElg'>Certificate of Eligibility</label>
         </div>
         {/* <div>
           <input id='jst' type='checkbox' checked={thing.jst} onChange={handleChange}></input>
@@ -47,11 +47,11 @@ function ChapterTOE(props){
         </div> */}
         <div>
           <input id='residency' type='checkbox' checked={thing.residency} onChange={handleChange}></input>
-          <label>Residency</label>
+          <label for='residency'>Residency</label>
         </div>
         <div>
           <input id='majorMatch' type='checkbox' checked={thing.majorMatch} onChange={handleChange}></input>
-          <label>Major matches Wolverine Track</label>
+          <label for='majorMatch'>Major matches Wolverine Track</label>
         </div>
         
 
