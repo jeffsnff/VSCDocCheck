@@ -14,6 +14,8 @@ function Response(props){
     jstCoeResident: `Document check - missing JST, COE & non-Resident. Emailed Stu to request JST, COE and instate resident. Majors matches WT - moved to ${semester} ${year} prepped to cert. - ${initials}`,
     wtMatch: `Document check - WT does not match to degree on Snapshot. Informed stu via email to fill out a 1995 form. moved to awaiting information - ${initials}`,
     residentWT: `Document Check - WT does not match & Stu is non-resident. Emailed stu about filling out 1995 form as well as contacting Resident office. Moved to Awaiting Information - ${initials}`,
+    jstWT: `Document check - WT does not match to degree on Snapshot, & missing JST Informed stu via email to fill out a 1995 form and gave steps to request JST/CCAF. moved to awaiting information - ${initials}`,
+    jstWTResident : `Document Check - Stu missing JST, is non resident and major does not match WT. Gave student steps on how to request JST, apply for 1995 change of program, and residency number. Moved to Awaiting for information - ${initials}`,
     allDocs: `Document check- all documentation on file. Major matches WT- moved to ${semester} ${year} prepped for cert. - ${initials}`
   }
   const jstResponse = 
@@ -108,7 +110,40 @@ function Response(props){
       <p>I also noticed that you are not listed as a Utah resident. Please contact the residency office as soon as possible to work to establish Utah Residency and be charged in-state tuition rates. They can be reached at 801-863-8706 or <a>residency@uvu.edu.</a>  </p>
       <p>Respectivly,</p>
     </div>
-  
+    const jstWT = 
+    <div>
+      <p>Hello [ Student Name ]</p>
+      <p>I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a>put link here</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.</p>
+      <p>
+        We are also missing your official military transcripts; either the Joint Service Transcripts (JST) or Community College of the Air Force Transcripts (CCAF). The JST/CCAF  can be sent to UVU by going to https://jst.doded.mil/ or https://www.airuniversity.af.edu/Barnes/CCAF/ and sending them to UVU transcript office. The school must have official copies these transcripts before your classes can be certified for benefits.  If you have any questions or need any help with this reach out to us and we can assist you.
+      </p>
+      <p>Steps to submit the Joint Services Transcript (Army/Marines/Navy/CG):</p>
+      <ol>
+        <li className={'hey'}>Please navigate to <a>https://jst.doded.mil/jst/ </a>in a web browser. If your browser displays a security warning, you can either click “Advanced” and then “Proceed” or use another browser.</li>
+        <li className={'hey'}>Create an account or use a CAC to log in.</li>
+        <li className={'hey'}>After logging in, choose option 5 and search for Utah Valley University. </li>
+        <li className={'hey'}>Finally, check the box to consent to e-delivery and submit. This will officially deliver the transcript to the UVU Transfer Credit Office.</li>
+      </ol>
+      <p>Respectivly,</p>
+    </div>
+
+    const jstWTResident =
+    <div>
+      <p>Hello [ Student Name ]</p>
+      <p>I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a>https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.</p>
+      <p>I also noticed that you are not listed as a Utah resident. Please contact the residency office as soon as possible to work to establish Utah Residency and be charged in-state tuition rates. They can be reached at 801-863-8706 or <a>residency@uvu.edu.</a>  </p>
+      <p>
+        We are also missing your official military transcripts; either the Joint Service Transcripts (JST) or Community College of the Air Force Transcripts (CCAF). The JST/CCAF  can be sent to UVU by going to https://jst.doded.mil/ or https://www.airuniversity.af.edu/Barnes/CCAF/ and sending them to UVU transcript office. The school must have official copies these transcripts before your classes can be certified for benefits.  If you have any questions or need any help with this reach out to us and we can assist you.
+      </p>
+      <p>Steps to submit the Joint Services Transcript (Army/Marines/Navy/CG):</p>
+      <ol>
+        <li className={'hey'}>Please navigate to <a>https://jst.doded.mil/jst/ </a>in a web browser. If your browser displays a security warning, you can either click “Advanced” and then “Proceed” or use another browser.</li>
+        <li className={'hey'}>Create an account or use a CAC to log in.</li>
+        <li className={'hey'}>After logging in, choose option 5 and search for Utah Valley University. </li>
+        <li className={'hey'}>Finally, check the box to consent to e-delivery and submit. This will officially deliver the transcript to the UVU Transfer Credit Office.</li>
+      </ol>
+      <p>Respectivly,</p>
+    </div>
   
   let note
   let email =''
@@ -116,9 +151,15 @@ function Response(props){
     note = noteResponse.allDocs
   }else if(jst !== false && residency !== false && majorMatch !== false && collegeCredit !== false) {
     note = noteResponse.allDocs
+  }else if(jst === false && residency === false && majorMatch === false){
+    note = noteResponse.jstWTResident
+    email = jstWTResident
   }else if(majorMatch === false && residency === false){
     note = noteResponse.residentWT
     email = residencyWT
+  }else if(majorMatch === false && majorMatch === false){
+    note = noteResponse.jstWT
+    email = jstWT
   }else if(jst === false && certElg === false){
     note = noteResponse.jstCOE
     email = jstCOEresponse
