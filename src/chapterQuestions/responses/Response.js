@@ -3,8 +3,10 @@ import React from 'react'
 function Response(props){
 
   const { jst, residency, collegeCredit, majorMatch, certElg, initials, semester, year } = props
-  const date = Date.now();
-  const today = (new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit'}).format(date))
+  // const date = Date.now();
+  const today = (new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit'}).format(Date.now()))
+  let note
+  let email
 
   const noteResponse = {
     jst: `Document check- missing JST. Requested from stu by email-imaged. Major matches WT- moved to ${semester} ${year} prepped for cert. - ${initials}`,
@@ -249,8 +251,6 @@ function Response(props){
         </p>
       </div>
   
-  let note
-  let email =''
   if(jst !== false && residency !== false && majorMatch !== false && certElg !== false){
     note = noteResponse.allDocs
   }else if(jst !== false && residency !== false && majorMatch !== false && collegeCredit !== false) {
@@ -308,6 +308,7 @@ function Response(props){
         {today} {note}
       </div>
       <div>
+
         <h4>Email</h4>
         {email}
       </div>
