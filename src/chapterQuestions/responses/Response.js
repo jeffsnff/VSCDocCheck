@@ -7,6 +7,7 @@ function Response(props){
   const today = (new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit'}).format(Date.now()))
   let note
   let email
+  let emailSubject = `URGENT: Missing Documentation for ${semester} ${year} VA Education Benefits`
 
   const noteResponse = {
     jst: `Document check- missing JST. Requested from stu by email-imaged. Major matches WT- moved to ${semester} ${year} prepped for cert. - ${initials}`,
@@ -308,7 +309,8 @@ function Response(props){
         {today} {note}
       </div>
       <div>
-
+        <h4>Email Subject</h4>
+        {emailSubject}
         <h4>Email</h4>
         {email}
       </div>
