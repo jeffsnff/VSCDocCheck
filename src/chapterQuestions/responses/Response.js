@@ -284,7 +284,6 @@ function Response(props){
     note = noteResponse.coeWT
     email = coeWT
   }else if(certElg === false){
-    alert("it worked")
     note = noteResponse.coe
     email = coeResponse
   }else if(jst === false){
@@ -298,21 +297,14 @@ function Response(props){
     email = wolvrineTrack
   }
 
-
-  let emailHeader
-  if(email !== undefined){
-    emailHeader = <h1>Email</h1>
-  }
-
-
   return(
     <div>
       <div>
-        <h1>Note</h1>
+        <h4>Note</h4>
         {note}
       </div>
       <div>
-        {emailHeader}
+        <h4>Email</h4>
         {email}
       </div>
     </div>
