@@ -284,6 +284,7 @@ function Response(props){
     note = noteResponse.coeWT
     email = coeWT
   }else if(certElg === false){
+    alert("it worked")
     note = noteResponse.coe
     email = coeResponse
   }else if(jst === false){

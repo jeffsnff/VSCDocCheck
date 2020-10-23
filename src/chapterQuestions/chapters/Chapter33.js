@@ -35,7 +35,7 @@ function Chapter33(props){
 
   return(
     <div>
-      <h1>Chapter 33</h1>
+      <h1>Chapter 33 & 1606 & 30</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <input id='certElg' type='checkbox' checked={thing.certElg} onChange={handleChange}></input>
@@ -53,15 +53,6 @@ function Chapter33(props){
           <input id='majorMatch' type='checkbox' checked={thing.majorMatch} onChange={handleChange}></input>
           <label>Major matches Wolverine Track</label>
         </div>
-        
-
-        
-
-        
-        
-
-        
-        
         
 
         <button>Submit</button>
