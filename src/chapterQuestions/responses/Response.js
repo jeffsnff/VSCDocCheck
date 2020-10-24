@@ -3,6 +3,11 @@ import React from 'react'
 function Response(props){
 
   const { jst, residency, collegeCredit, majorMatch, certElg, initials, semester, year } = props
+  // const date = Date.now();
+  const today = (new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit'}).format(Date.now()))
+  let note
+  let email
+  let emailSubject = `URGENT: Missing Documentation for ${semester} ${year} VA Education Benefits`
 
   const noteResponse = {
     jst: `Document check- missing JST. Requested from stu by email-imaged. Major matches WT- moved to ${semester} ${year} prepped for cert. - ${initials}`,
@@ -20,6 +25,7 @@ function Response(props){
     jstWTResident : `Document Check - Stu missing JST, is non resident and major does not match WT. Gave student steps on how to request JST, apply for 1995 change of program, and residency number. Moved to Awaiting for information - ${initials}`,
     coeJSTwtResident: `Document Check - Student missing JST, COE, is non-resident and majors don't match. Informed how to fix issues moved to waiting for information. ${initials}`,
     coeJSTRest: `Document Check - missing COE, JST, and is non resident. Gave information on correcting these issues via email. imaged ${initials}`,
+    coeJSTWT: `Document Check - missing COE, JST and Majors don't match. Emailed stu on how to fix these issues. imaged ${initials}`,
     allDocs: `Document check- all documentation on file. Major matches WT- moved to ${semester} ${year} prepped for cert. - ${initials}`
   }
   const jstResponse = 
@@ -212,17 +218,40 @@ function Response(props){
       <p>Respectivly,</p>
     </div>
 
-    const coeWT =
-    <div>
-      <p>Hello [Student Name]</p>
-      <p>
-        I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a>https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.
-      </p>
+    const jstCOEwt =
+      <div>
+        <p>Hello [ Student Name ]</p>
 
-    </div>
+        <p>
+          I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a>https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.
+        </p>
+        <p>
+          We are missing your Certificate of Eligibility (COE). This is a letter you receive in the mail from the VA after completing an application on <a>https://www.va.gov/education/how-to-apply/</a> explaining the benefits you are eligible for. If you have not applied yet, please do so.  
+        </p>
+        <p>
+          If you have a copy of your COE, you can email it or bring it into our office. If you have not received one yet, it may be on it’s way if you applied less than 30 days ago.  If you would like to request a new one, you can call the VA student line at 1-888-442-4551.  Please contact us if you have any questions.
+        </p>
+        <p>
+          We are also missing your official military transcripts; either the Joint Service Transcripts (JST) or Community College of the Air Force Transcripts (CCAF). The JST/CCAF  can be sent to UVU by going to https://jst.doded.mil/ or https://www.airuniversity.af.edu/Barnes/CCAF/ and sending them to UVU transcript office. The school must have official copies these transcripts before your classes can be certified for benefits.  If you have any questions or need any help with this reach out to us and we can assist you.
+        </p>
+        <p>Steps to submit the Joint Services Transcript (Army/Marines/Navy/CG):</p>
+        <ol>
+          <li className={'hey'}>Please navigate to <a>https://jst.doded.mil/jst/ </a>in a web browser. If your browser displays a security warning, you can either click “Advanced” and then “Proceed” or use another browser.</li>
+          <li className={'hey'}>Create an account or use a CAC to log in.</li>
+          <li className={'hey'}>After logging in, choose option 5 and search for Utah Valley University. </li>
+          <li className={'hey'}>Finally, check the box to consent to e-delivery and submit. This will officially deliver the transcript to the UVU Transfer Credit Office.</li>
+        </ol>
+        <p>Respectivly,</p>
+      </div>
+
+    const coeWT =
+      <div>
+        <p>Hello [Student Name]</p>
+        <p>
+          I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a>https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.
+        </p>
+      </div>
   
-  let note
-  let email =''
   if(jst !== false && residency !== false && majorMatch !== false && certElg !== false){
     note = noteResponse.allDocs
   }else if(jst !== false && residency !== false && majorMatch !== false && collegeCredit !== false) {
@@ -236,7 +265,9 @@ function Response(props){
   }else if(certElg === false && jst === false && residency == false){
     note = noteResponse.coeJSTRest
     email = coeJSTRest
-
+  }else if(jst === false && certElg === false && majorMatch === false){
+    note = noteResponse.coeJSTWT
+    email = jstCOEwt
   }else if(majorMatch === false && residency === false){
     note = noteResponse.residentWT
     email = residencyWT
@@ -269,21 +300,18 @@ function Response(props){
     email = wolvrineTrack
   }
 
-
-  let emailHeader
-  if(email !== undefined){
-    emailHeader = <h1>Email</h1>
-  }
-
+  
 
   return(
     <div>
       <div>
-        <h1>Note</h1>
-        {note}
+        <h4>Note</h4>
+        {today} {note}
       </div>
       <div>
-        {emailHeader}
+        <h4>Email Subject</h4>
+        {emailSubject}
+        <h4>Email</h4>
         {email}
       </div>
     </div>

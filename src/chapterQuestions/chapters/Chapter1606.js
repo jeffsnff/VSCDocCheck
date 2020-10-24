@@ -1,57 +1,77 @@
 import React, { useState } from 'react'
+import Response from '../responses/Response.js'
 
-function Chapter1606(){
+function Chapter1606(props){
   const initState = {
     jst: false,
-    collegeCredit: false,
+    certElg: false,
     residency: false,
     majorMatch: false
   }
   const [thing, setThing] = useState(initState)
+  const [ toggle, setToggle ] = useState(false)
 
   const handleChange = e => {
-    const { checked, name, value , id} = e.target
+    const { checked, id} = e.target
     setThing(prevThing => ({
       ...prevThing,
       [id]: checked
     }))
-    console.log(e.target.checked)
   }
 
   const handleSubmit = e => {
     e.preventDefault()
-    console.log(e.target)
-    
+    setToggle(true)
+  }
 
+  const resetSelection = () => {
+    setThing(initState)
+    setToggle(false)
   }
 
 
   return(
     <div>
-      <h1>Chapter 31</h1>
+      <h1>Chapter 1606</h1>
       <form onSubmit={handleSubmit}>
-
-        <input id='jst' type='checkbox' checked={thing.jst} onChange={handleChange}></input>
-        <label>Certificate of Eligibility</label>
-
-        <input id='jst' type='checkbox' checked={thing.jst} onChange={handleChange}></input>
-        <label>Joint Service Transcripts / Military Credit</label>
-
-        <input id='collegeCredit' type='checkbox' checked={thing.collegeCredit} onChange={handleChange}></input>
-        <label>College Credit if Applicable</label>
-
-        
-        <input id='residency' type='checkbox' checked={thing.residency} onChange={handleChange}></input>
-        <label>Residency</label>
-
-        <input id='jst' type='checkbox' checked={thing.jst} onChange={handleChange}></input>
-        <label>Kicker Contract</label>
-        
-        <input id='majorMatch' type='checkbox' checked={thing.majorMatch} onChange={handleChange}></input>
-        <label>Major matches Wolverine Track</label>
-
+        <div className='d-flex flex-column'>
+          <div>
+            <input id='jst' type='checkbox' checked={thing.jst} onChange={handleChange}></input>
+            <label>Joint Service Transcripts / Military Credit</label>
+          </div>
+          <div>
+            <input id='certElg' type='checkbox' checked={thing.certElg} onChange={handleChange}></input>
+            <label>Certificate of Eligibility</label>
+          </div>
+          <div>
+            <input id='residency' type='checkbox' checked={thing.residency} onChange={handleChange}></input>
+            <label>Residency</label>
+          </div>
+          <div>
+            <input id='majorMatch' type='checkbox' checked={thing.majorMatch} onChange={handleChange}></input>
+            <label>Major matches Wolverine Track</label>
+          </div>
+        </div>
         <button>Submit</button>
+        
       </form>
+      <button onClick={() => resetSelection()}>Reset</button>
+      <div>
+        {
+          toggle ? 
+            <Response
+              jst={thing.jst}
+              residency={thing.residency}
+              majorMatch={thing.majorMatch}
+              certElg={thing.certElg}
+              year={props.year}
+              semester={props.semester}
+              initials={props.initials}
+            />
+          :
+          null
+        }
+      </div>
     </div>
   )
 }
