@@ -3,7 +3,6 @@ import React from 'react'
 function Response(props){
 
   const { jst, residency, collegeCredit, majorMatch, certElg, initials, semester, year } = props
-  // const date = Date.now();
   const today = (new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit'}).format(Date.now()))
   let note
   let email

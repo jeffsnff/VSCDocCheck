@@ -40,11 +40,6 @@ function Chapter31(props){
             <input className="custom-control-input" id='jst' type='checkbox' checked={thing.jst} onChange={handleChange}></input>
             <label className="custom-control-label" for='jst'>Joint Service Transcripts / Military Credit</label>
           </div>
-          
-          {/* <div>
-            <input id='collegeCredit' type='checkbox' checked={thing.collegeCredit} onChange={handleChange}></input>
-            <label>College Credit if Applicable</label>
-          </div> */}
           <div className="custom-control custom-checkbox checkbox-xl">
             <input className="custom-control-input" id='residency' type='checkbox' checked={thing.residency} onChange={handleChange}></input>
             <label className="custom-control-label" for='residency'>Residency</label>
@@ -62,14 +57,14 @@ function Chapter31(props){
         {
           toggle ? 
             <Response
-            jst={thing.jst}
-            collegeCredit={thing.collegeCredit}
-            residency={thing.residency}
-            majorMatch={thing.majorMatch}
-            year={props.year}
-            semester={props.semester}
-            initials={props.initials}
-          />
+              jst={thing.jst}
+              residency={thing.residency}
+              majorMatch={thing.majorMatch}
+              
+              year={props.year}
+              semester={props.semester}
+              initials={props.initials}
+            />
           :
           null
         }
