@@ -62,19 +62,15 @@ function Chapter33(props){
         {
           toggle ? 
             <Response
-            jst={thing.jst}
-            collegeCredit={thing.collegeCredit}
-            residency={thing.residency}
-            majorMatch={thing.majorMatch}
-            year={props.year}
-            semester={props.semester}
-            initials={props.initials}
-            certElg={thing.certElg}
-            kicker={thing.kicker}
-            initials={props.initials}
-            semester={props.semester}
-            year={props.year}
-          />
+              jst={thing.jst}
+              residency={thing.residency}
+              majorMatch={thing.majorMatch}
+              certElg={thing.certElg}
+
+              year={props.year}
+              semester={props.semester}
+              initials={props.initials}
+            />
           :
           null
         }

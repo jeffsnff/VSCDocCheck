@@ -16,13 +16,6 @@ function SemesterInfo() {
     sessionStorage.setItem([name], [value])
   }
 
-  // const onSubmit = e => {
-  //   e.preventDefault()
-  //   console.log(e.target)
-
-  // }
-  
-
   useEffect( () => {
     const localSemester = sessionStorage.getItem('semester')
     const localYear = sessionStorage.getItem('year')
@@ -52,7 +45,6 @@ function SemesterInfo() {
 
 
   }
-  // console.log(chapter)
 
   return(
     <MDBContainer>
@@ -90,8 +82,6 @@ function SemesterInfo() {
           <MDBRow className="d-flex justify-content-around">
           <button name='chapter' value='31' onClick={chapterSelected }>Chapter 31</button>
           <button name='chapter' value='33' onClick={chapterSelected }>Chapter 33 & 1606 & 30</button>
-          {/* <button name='chapter' value='1606' onClick={chapterSelected }>Chapter 1606</button> */}
-          {/* <button name='chapter' value='30' onClick={chapterSelected }>Chapter 30</button> */}
           <button name='chapter' value='toe' onClick={chapterSelected }>Chapter 33 TOE / 35 DEA / 35 FRY</button>
         </MDBRow>
         
