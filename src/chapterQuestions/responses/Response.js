@@ -25,6 +25,7 @@ function Response(props){
     coeJSTwtResident: `Document Check - Student missing JST, COE, is non-resident and majors don't match. Informed how to fix issues moved to waiting for information. ${initials}`,
     coeJSTRest: `Document Check - missing COE, JST, and is non resident. Gave information on correcting these issues via email. imaged ${initials}`,
     coeJSTWT: `Document Check - missing COE, JST and Majors don't match. Emailed stu on how to fix these issues. imaged ${initials}`,
+    coeResMaj: `Document Check - Stu missing COE, non-resident, major does not match. Informed stu how to fix issues. email imaged ${initials}`,
     allDocs: `Document check- all documentation on file. Major matches WT- moved to ${semester} ${year} prepped for cert. - ${initials}`
   }
   const jstResponse = 
@@ -272,11 +273,33 @@ function Response(props){
         </p>
       </div>
 
+    const coeResMajor = 
+    <div>
+      <p>Hello [ Student Name ]</p>
+      <p>
+        I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a href='https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction'>https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.
+      </p>
+      <p>
+        I also noticed that you are not listed as a Utah resident. Please contact the residency office as soon as possible to work to establish Utah Residency and be charged in-state tuition rates. They can be reached at <a href='801-863-8706'>801-863-8706</a> or <a href='residency@uvu.edu'>residency@uvu.edu</a>.
+      </p>
+
+      <p>
+        We are missing your Certificate of Eligibility (COE). This is a letter you receive in the mail from the VA after completing an application on <a href='https://www.va.gov/education/how-to-apply/'>https://www.va.gov/education/how-to-apply/</a> explaining the benefits you are eligible for. If you have not applied yet, please do so.  
+      </p>
+      <p>
+        If you have a copy of your COE, you can email it or bring it into our office. If you have not received one yet, it may be on it’s way if you applied less than 30 days ago.  If you would like to request a new one, you can call the VA student line at <a href='1-888-442-4551'>1-888-442-4551</a>.  Please contact us if you have any questions.
+      </p>
+      <p>Respectivly,</p>
+    </div>
+
   if(jst !== false && residency !== false && majorMatch !== false && certElg !== false){
     note = noteResponse.allDocs
   }else if(jst === false && residency === false && majorMatch === false && certElg === false){
     note = noteResponse.coeJSTwtResident
     email = jstCOEwtResident
+  }else if(certElg === false && residency === false && majorMatch === false){
+    note = noteResponse.coeResMaj
+    email = coeResMajor
   }else if(jst === false && residency === false && majorMatch === false){
     note = noteResponse.jstWTResident
     email = jstWTResident

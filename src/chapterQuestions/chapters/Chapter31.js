@@ -50,10 +50,10 @@ function Chapter31(props){
             <label className="custom-control-label" for='majorMatch'>Major matches Wolverine Track</label>
           </div>
         </div>
-        <MDBBtn>Submit</MDBBtn>
+        <MDBBtn onClick={handleSubmit}>Submit</MDBBtn>
         
       </form>
-      <MDBBtn onClick={() => resetSelection()}>Reset</MDBBtn>
+      <MDBBtn onClick={resetSelection}>Reset</MDBBtn>
       <div>
         {
           toggle ? 
