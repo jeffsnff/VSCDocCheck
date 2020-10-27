@@ -1,4 +1,5 @@
 import React from 'react'
+import { MDBBtn } from 'mdbreact'
 
 function Response(props){
 
@@ -345,12 +346,16 @@ function Response(props){
     <div>
       <div>
         <h4>Note</h4>
+        <MDBBtn onClick={() => navigator.clipboard.writeText(today + ' ' + note)}>Note</MDBBtn>
         {today} {note}
       </div>
       <div>
         <h4>Email Subject</h4>
+        <MDBBtn onClick={() => navigator.clipboard.writeText(emailSubject)}>Email Subject</MDBBtn>
         {emailSubject}
         <h4>Email</h4>
+        {/* <MDBBtn onClick={() => navigator.clipboard.writeText(email.div)}>Email</MDBBtn>
+        <MDBBtn onClick={() => console.log(email)}>Email Test</MDBBtn> */}
         {email}
       </div>
     </div>
