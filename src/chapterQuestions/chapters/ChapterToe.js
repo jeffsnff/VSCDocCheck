@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Response from '../responses/Response.js'
+import { MDBBtn } from 'mdbreact'
 
 function ChapterTOE(props){
   
@@ -49,9 +50,9 @@ function ChapterTOE(props){
           <input className="custom-control-input" id='majorMatch' type='checkbox' checked={thing.majorMatch} onChange={handleChange}></input>
           <label className="custom-control-label" for='majorMatch'>Major matches Wolverine Track</label>
         </div>
-        <button>Submit</button>
+        <MDBBtn>Submit</MDBBtn>
       </form>
-      <button onClick={() => resetSelection()}>Reset</button>
+      <MDBBtn onClick={() => resetSelection()}>Reset</MDBBtn>
       <div>
         {
           toggle ? 
