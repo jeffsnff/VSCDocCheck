@@ -56,9 +56,9 @@ function Chapter33(props){
         </div>
         
 
-        <MDBBtn>Submit</MDBBtn>
+        <MDBBtn onClick={handleSubmit}>Submit</MDBBtn>
       </form>
-      <MDBBtn onClick={() => resetSelection()}>Reset</MDBBtn>
+      <MDBBtn onClick={resetSelection}>Reset</MDBBtn>
       <div>
         {
           toggle ? 
