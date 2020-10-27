@@ -30,10 +30,11 @@ function Response(props){
   const jstResponse = 
     <div>
       <p>Hello [student name],</p>
-      <p>I was reviewing your {semester} {year} class schedule form today and noticed that we are missing your official military transcripts; either the Joint Service Transcripts (JST) or Community College of the Air Force Transcripts (CCAF) . The JST/CCAF  can be sent to UVU by going to https://jst.doded.mil/ or https://www.airuniversity.af.edu/Barnes/CCAF/ and sending them to UVU transcript office. The school must have official copies these transcripts before your classes can be certified for benefits.  If you have any questions or need any help with this reach out to us and we can assist you.</p>
+      <p>
+        I was reviewing your {semester} {year} class schedule form today and noticed that we are missing your official military transcripts; either the Joint Service Transcripts (JST) or Community College of the Air Force Transcripts (CCAF) . The JST/CCAF  can be sent to UVU by going to <a href='https://jst.doded.mil/'>https://jst.doded.mil/</a> or <a href='https://www.airuniversity.af.edu/Barnes/CCAF/'>https://www.airuniversity.af.edu/Barnes/CCAF/</a> and sending them to UVU transcript office. The school must have official copies these transcripts before your classes can be certified for benefits.  If you have any questions or need any help with this reach out to us and we can assist you.</p>
       <p>Steps to submit the Joint Services Transcript (Army/Marines/Navy/CG):</p>
       <ol>
-        <li className={'hey'}>Please navigate to <a>https://jst.doded.mil/jst/ </a>in a web browser. If your browser displays a security warning, you can either click “Advanced” and then “Proceed” or use another browser.</li>
+        <li className={'hey'}>Please navigate to <a href='https://jst.doded.mil/jst/'>https://jst.doded.mil/jst/</a>in a web browser. If your browser displays a security warning, you can either click “Advanced” and then “Proceed” or use another browser.</li>
         <li className={'hey'}>Create an account or use a CAC to log in.</li>
         <li className={'hey'}>After logging in, choose option 5 and search for Utah Valley University. </li>
         <li className={'hey'}>Finally, check the box to consent to e-delivery and submit. This will officially deliver the transcript to the UVU Transfer Credit Office.</li>
@@ -45,7 +46,7 @@ function Response(props){
     <div>
       <p>Hello [Student Name]</p>
       <p>
-        I was reviewing your {semester} {year} class schedule form today and noticed that you are not listed as a Utah resident. Please contact the residency office as soon as possible to work to establish Utah Residency and be charged in-state tuition rates. They can be reached at 801-863-8706 or <a>residency@uvu.edu.</a>  
+        I was reviewing your {semester} {year} class schedule form today and noticed that you are not listed as a Utah resident. Please contact the residency office as soon as possible to work to establish Utah Residency and be charged in-state tuition rates. They can be reached at 801-863-8706 or <a href='residency@uvu.edu'>residency@uvu.edu</a>.
       </p>
       <p>
         <b>If they are Chapter 33/31 add this bit:</b>
@@ -58,19 +59,22 @@ function Response(props){
   <div>
     <p>Hello [Student Name]</p>
       <p>
-      I was reviewing your {semester} {year} class schedule form to use GI Bill benefits, and noticed that we are missing your Certificate of Eligibility (COE). This is a letter you receive in the mail from the VA after completing an application on <a>https://www.va.gov/education/how-to-apply/</a> explaining the benefits you are eligible for. If you have not applied yet, please do so.  
+        I was reviewing your {semester} {year} class schedule form to use GI Bill benefits, and noticed that we are missing your Certificate of Eligibility (COE). This is a letter you receive in the mail from the VA after completing an application on <a href='https://www.va.gov/education/how-to-apply/'>https://www.va.gov/education/how-to-apply/</a> explaining the benefits you are eligible for. If you have not applied yet, please do so.  
       </p>
       <p>
-      If you have a copy of your COE, you can email it or bring it into our office. If you have not received one yet, it may be on it’s way if you applied less than 30 days ago.  If you would like to request a new one, you can call the VA student line at 1-888-442-4551.  Please contact us if you have any questions.
+        If you have a copy of your COE, you can email it or bring it into our office. If you have not received one yet, it may be on it’s way if you applied less than 30 days ago.  If you would like to request a new one, you can call the VA student line at <a href='1-888-442-4551'>1-888-442-4551</a>.  Please contact us if you have any questions.
       </p>
 
-      <p>I also noticed that you are not listed as a Utah resident. Please contact the residency office as soon as possible to work to establish Utah Residency and be charged in-state tuition rates. They can be reached at 801-863-8706 or <a>residency@uvu.edu.</a>  
+      <p>
+        I also noticed that you are not listed as a Utah resident. Please contact the residency office as soon as possible to work to establish Utah Residency and be charged in-state tuition rates. They can be reached at <a href='801-863-8706'>801-863-8706</a> or <a href='residency@uvu.edu'>residency@uvu.edu</a>.
       </p>
 
-      <p>Also, we are missing your official military transcripts; either the Joint Service Transcripts (JST) or Community College of the Air Force Transcripts (CCAF) . The JST/CCAF  can be sent to UVU by going to https://jst.doded.mil/ or https://www.airuniversity.af.edu/Barnes/CCAF/ and sending them to UVU transcript office. The school must have official copies these transcripts before your classes can be certified for benefits.  If you have any questions or need any help with this reach out to us and we can assist you.</p>
+      <p>
+        Also, we are missing your official military transcripts; either the Joint Service Transcripts (JST) or Community College of the Air Force Transcripts (CCAF) . The JST/CCAF  can be sent to UVU by going to <a href='https://jst.doded.mil/'>https://jst.doded.mil/</a> or <a href='https://www.airuniversity.af.edu/Barnes/CCAF/'>https://www.airuniversity.af.edu/Barnes/CCAF/</a>and sending them to UVU transcript office. The school must have official copies these transcripts before your classes can be certified for benefits.  If you have any questions or need any help with this reach out to us and we can assist you.
+      </p>
       <p>Steps to submit the Joint Services Transcript (Army/Marines/Navy/CG):</p>
       <ol>
-        <li className={'hey'}>Please navigate to <a>https://jst.doded.mil/jst/ </a>in a web browser. If your browser displays a security warning, you can either click “Advanced” and then “Proceed” or use another browser.</li>
+        <li className={'hey'}>Please navigate to <a href='https://jst.doded.mil/jst/'>https://jst.doded.mil/jst/</a> in a web browser. If your browser displays a security warning, you can either click “Advanced” and then “Proceed” or use another browser.</li>
         <li className={'hey'}>Create an account or use a CAC to log in.</li>
         <li className={'hey'}>After logging in, choose option 5 and search for Utah Valley University. </li>
         <li className={'hey'}>Finally, check the box to consent to e-delivery and submit. This will officially deliver the transcript to the UVU Transfer Credit Office.</li>
@@ -82,10 +86,10 @@ function Response(props){
     <div>
       <p>Hello [Student Name]</p>
       <p>
-      I was reviewing your {semester} {year} class schedule form to use GI Bill benefits, and noticed that we are missing your Certificate of Eligibility (COE). This is a letter you receive in the mail from the VA after completing an application on <a>https://www.va.gov/education/how-to-apply/</a> explaining the benefits you are eligible for. If you have not applied yet, please do so.  
+        I was reviewing your {semester} {year} class schedule form to use GI Bill benefits, and noticed that we are missing your Certificate of Eligibility (COE). This is a letter you receive in the mail from the VA after completing an application on <a href='https://www.va.gov/education/how-to-apply/'>https://www.va.gov/education/how-to-apply/</a> explaining the benefits you are eligible for. If you have not applied yet, please do so.  
       </p>
       <p>
-      If you have a copy of your COE, you can email it or bring it into our office. If you have not received one yet, it may be on it’s way if you applied less than 30 days ago.  If you would like to request a new one, you can call the VA student line at 1-888-442-4551.  Please contact us if you have any questions.
+        If you have a copy of your COE, you can email it or bring it into our office. If you have not received one yet, it may be on it’s way if you applied less than 30 days ago.  If you would like to request a new one, you can call the VA student line at <a href='1-888-442-4551'>1-888-442-4551</a>.  Please contact us if you have any questions.
       </p>
       <p>Respectfully,</p>
     </div>
@@ -94,15 +98,17 @@ function Response(props){
     <div>
       <p>Hello [Student Name]</p>
       <p>
-      I was reviewing your {semester} {year} class schedule form to use GI Bill benefits, and noticed that we are missing your Certificate of Eligibility (COE). This is a letter you receive in the mail from the VA after completing an application on <a>https://www.va.gov/education/how-to-apply/</a> explaining the benefits you are eligible for. If you have not applied yet, please do so.  
+        I was reviewing your {semester} {year} class schedule form to use GI Bill benefits, and noticed that we are missing your Certificate of Eligibility (COE). This is a letter you receive in the mail from the VA after completing an application on <a href='https://www.va.gov/education/how-to-apply/'>https://www.va.gov/education/how-to-apply/</a> explaining the benefits you are eligible for. If you have not applied yet, please do so.  
       </p>
       <p>
-      If you have a copy of your COE, you can email it or bring it into our office. If you have not received one yet, it may be on it’s way if you applied less than 30 days ago.  If you would like to request a new one, you can call the VA student line at 1-888-442-4551.  Please contact us if you have any questions.
+        If you have a copy of your COE, you can email it or bring it into our office. If you have not received one yet, it may be on it’s way if you applied less than 30 days ago.  If you would like to request a new one, you can call the VA student line at 1-888-442-4551.  Please contact us if you have any questions.
       </p>
-      <p>Also, we are missing your official military transcripts; either the Joint Service Transcripts (JST) or Community College of the Air Force Transcripts (CCAF) . The JST/CCAF  can be sent to UVU by going to https://jst.doded.mil/ or https://www.airuniversity.af.edu/Barnes/CCAF/ and sending them to UVU transcript office. The school must have official copies these transcripts before your classes can be certified for benefits.  If you have any questions or need any help with this reach out to us and we can assist you.</p>
+      <p>
+        Also, we are missing your official military transcripts; either the Joint Service Transcripts (JST) or Community College of the Air Force Transcripts (CCAF) . The JST/CCAF  can be sent to UVU by going to <a href='https://jst.doded.mil/ '>https://jst.doded.mil/</a> or <a href='https://www.airuniversity.af.edu/Barnes/CCAF/'>https://www.airuniversity.af.edu/Barnes/CCAF/</a> and sending them to UVU transcript office. The school must have official copies these transcripts before your classes can be certified for benefits.  If you have any questions or need any help with this reach out to us and we can assist you.
+      </p>
       <p>Steps to submit the Joint Services Transcript (Army/Marines/Navy/CG):</p>
       <ol>
-        <li className={'hey'}>Please navigate to <a>https://jst.doded.mil/jst/ </a>in a web browser. If your browser displays a security warning, you can either click “Advanced” and then “Proceed” or use another browser.</li>
+        <li className={'hey'}>Please navigate to <a href='https://jst.doded.mil/jst/'>https://jst.doded.mil/jst/</a> in a web browser. If your browser displays a security warning, you can either click “Advanced” and then “Proceed” or use another browser.</li>
         <li className={'hey'}>Create an account or use a CAC to log in.</li>
         <li className={'hey'}>After logging in, choose option 5 and search for Utah Valley University. </li>
         <li className={'hey'}>Finally, check the box to consent to e-delivery and submit. This will officially deliver the transcript to the UVU Transfer Credit Office.</li>
@@ -114,14 +120,14 @@ function Response(props){
     <div>
       <p>Hello [Student Name]</p>
       <p>
-        I was reviewing your {semester} {year} class schedule form today and noticed that you are not listed as a Utah resident. Please contact the residency office as soon as possible to work to establish Utah Residency and be charged in-state tuition rates. They can be reached at 801-863-8706 or <a>residency@uvu.edu.</a>  
+        I was reviewing your {semester} {year} class schedule form today and noticed that you are not listed as a Utah resident. Please contact the residency office as soon as possible to work to establish Utah Residency and be charged in-state tuition rates. They can be reached at 801-863-8706 or <a href='residency@uvu.edu'>residency@uvu.edu</a>. 
       </p>
       <p>
-        We are also missing your official military transcripts; either the Joint Service Transcripts (JST) or Community College of the Air Force Transcripts (CCAF). The JST/CCAF  can be sent to UVU by going to https://jst.doded.mil/ or https://www.airuniversity.af.edu/Barnes/CCAF/ and sending them to UVU transcript office. The school must have official copies these transcripts before your classes can be certified for benefits.  If you have any questions or need any help with this reach out to us and we can assist you.
-        </p>
+        We are also missing your official military transcripts; either the Joint Service Transcripts (JST) or Community College of the Air Force Transcripts (CCAF). The JST/CCAF  can be sent to UVU by going to <a href='https://jst.doded.mil/'>https://jst.doded.mil/</a> or <a href='https://www.airuniversity.af.edu/Barnes/CCAF/'>https://www.airuniversity.af.edu/Barnes/CCAF/</a> and sending them to UVU transcript office. The school must have official copies these transcripts before your classes can be certified for benefits.  If you have any questions or need any help with this reach out to us and we can assist you.
+      </p>
       <p>Steps to submit the Joint Services Transcript (Army/Marines/Navy/CG):</p>
       <ol>
-        <li className={'hey'}>Please navigate to <a>https://jst.doded.mil/jst/ </a>in a web browser. If your browser displays a security warning, you can either click “Advanced” and then “Proceed” or use another browser.</li>
+        <li className={'hey'}>Please navigate to <a href='https://jst.doded.mil/jst/'>https://jst.doded.mil/jst/</a> in a web browser. If your browser displays a security warning, you can either click “Advanced” and then “Proceed” or use another browser.</li>
         <li className={'hey'}>Create an account or use a CAC to log in.</li>
         <li className={'hey'}>After logging in, choose option 5 and search for Utah Valley University. </li>
         <li className={'hey'}>Finally, check the box to consent to e-delivery and submit. This will officially deliver the transcript to the UVU Transfer Credit Office.</li>
@@ -132,27 +138,35 @@ function Response(props){
     const wolvrineTrack = 
     <div>
       <p>Hello [Student Name]</p>
-      <p>I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a>https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.</p>
+      <p>
+        I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a href='https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction'>https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.
+      </p>
       <p>Respectivly,</p>
     </div>
 
     const residencyWT =
     <div>
       <p>Hello [ Student Name ]</p>
-      <p>I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a>https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.</p>
-      <p>I also noticed that you are not listed as a Utah resident. Please contact the residency office as soon as possible to work to establish Utah Residency and be charged in-state tuition rates. They can be reached at 801-863-8706 or <a>residency@uvu.edu.</a>  </p>
+      <p>
+        I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a href='https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction'>https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.
+      </p>
+      <p>
+        I also noticed that you are not listed as a Utah resident. Please contact the residency office as soon as possible to work to establish Utah Residency and be charged in-state tuition rates. They can be reached at 801-863-8706 or <a href='residency@uvu.edu'>residency@uvu.edu</a>.
+      </p>
       <p>Respectivly,</p>
     </div>
     const jstWT = 
     <div>
       <p>Hello [ Student Name ]</p>
-      <p>I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a>https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.</p>
       <p>
-        We are also missing your official military transcripts; either the Joint Service Transcripts (JST) or Community College of the Air Force Transcripts (CCAF). The JST/CCAF  can be sent to UVU by going to https://jst.doded.mil/ or https://www.airuniversity.af.edu/Barnes/CCAF/ and sending them to UVU transcript office. The school must have official copies these transcripts before your classes can be certified for benefits.  If you have any questions or need any help with this reach out to us and we can assist you.
+        I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a href='https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction'>https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.
+      </p>
+      <p>
+        We are also missing your official military transcripts; either the Joint Service Transcripts (JST) or Community College of the Air Force Transcripts (CCAF). The JST/CCAF  can be sent to UVU by going to <a href='https://jst.doded.mil/'>https://jst.doded.mil/</a> or <a href='https://www.airuniversity.af.edu/Barnes/CCAF/'>https://www.airuniversity.af.edu/Barnes/CCAF/</a> and sending them to UVU transcript office. The school must have official copies these transcripts before your classes can be certified for benefits.  If you have any questions or need any help with this reach out to us and we can assist you.
       </p>
       <p>Steps to submit the Joint Services Transcript (Army/Marines/Navy/CG):</p>
       <ol>
-        <li className={'hey'}>Please navigate to <a>https://jst.doded.mil/jst/ </a>in a web browser. If your browser displays a security warning, you can either click “Advanced” and then “Proceed” or use another browser.</li>
+        <li className={'hey'}>Please navigate to <a href='https://jst.doded.mil/jst/'>https://jst.doded.mil/jst/</a> in a web browser. If your browser displays a security warning, you can either click “Advanced” and then “Proceed” or use another browser.</li>
         <li className={'hey'}>Create an account or use a CAC to log in.</li>
         <li className={'hey'}>After logging in, choose option 5 and search for Utah Valley University. </li>
         <li className={'hey'}>Finally, check the box to consent to e-delivery and submit. This will officially deliver the transcript to the UVU Transfer Credit Office.</li>
@@ -163,8 +177,12 @@ function Response(props){
     const jstWTResident =
     <div>
       <p>Hello [ Student Name ]</p>
-      <p>I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a href='https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction'>https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.</p>
-      <p>I also noticed that you are not listed as a Utah resident. Please contact the residency office as soon as possible to work to establish Utah Residency and be charged in-state tuition rates. They can be reached at 801-863-8706 or <a href='residency@uvu.edu'>residency@uvu.edu.</a>  </p>
+      <p>
+        I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a href='https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction'>https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.
+      </p>
+      <p>
+        I also noticed that you are not listed as a Utah resident. Please contact the residency office as soon as possible to work to establish Utah Residency and be charged in-state tuition rates. They can be reached at 801-863-8706 or <a href='residency@uvu.edu'>residency@uvu.edu.</a>
+      </p>
       <p>
         We are also missing your official military transcripts; either the Joint Service Transcripts (JST) or Community College of the Air Force Transcripts (CCAF). The JST/CCAF  can be sent to UVU by going to <a href='https://jst.doded.mil/ '>https://jst.doded.mil/</a> or <a href='https://www.airuniversity.af.edu/Barnes/CCAF/'>https://www.airuniversity.af.edu/Barnes/CCAF/ </a>and sending them to UVU transcript office. The school must have official copies these transcripts before your classes can be certified for benefits.  If you have any questions or need any help with this reach out to us and we can assist you.
       </p>
@@ -181,23 +199,26 @@ function Response(props){
     const jstCOEwtResident = 
     <div>
       <p>Hello [ Student Name ]</p>
-      <p>I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a>https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.</p>
-
-      <p>I also noticed that you are not listed as a Utah resident. Please contact the residency office as soon as possible to work to establish Utah Residency and be charged in-state tuition rates. They can be reached at 801-863-8706 or <a>residency@uvu.edu.</a>  </p>
-
       <p>
-      We are missing your Certificate of Eligibility (COE). This is a letter you receive in the mail from the VA after completing an application on <a>https://www.va.gov/education/how-to-apply/</a> explaining the benefits you are eligible for. If you have not applied yet, please do so.  
+        I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a href='https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction'>https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.
       </p>
       <p>
-      If you have a copy of your COE, you can email it or bring it into our office. If you have not received one yet, it may be on it’s way if you applied less than 30 days ago.  If you would like to request a new one, you can call the VA student line at 1-888-442-4551.  Please contact us if you have any questions.
+        I also noticed that you are not listed as a Utah resident. Please contact the residency office as soon as possible to work to establish Utah Residency and be charged in-state tuition rates. They can be reached at <a href='801-863-8706'>801-863-8706</a> or <a href='residency@uvu.edu'>residency@uvu.edu</a>.
+      </p>
+
+      <p>
+        We are missing your Certificate of Eligibility (COE). This is a letter you receive in the mail from the VA after completing an application on <a href='https://www.va.gov/education/how-to-apply/'>https://www.va.gov/education/how-to-apply/</a> explaining the benefits you are eligible for. If you have not applied yet, please do so.  
       </p>
       <p>
-        We are also missing your official military transcripts; either the Joint Service Transcripts (JST) or Community College of the Air Force Transcripts (CCAF). The JST/CCAF  can be sent to UVU by going to https://jst.doded.mil/ or https://www.airuniversity.af.edu/Barnes/CCAF/ and sending them to UVU transcript office. The school must have official copies these transcripts before your classes can be certified for benefits.  If you have any questions or need any help with this reach out to us and we can assist you.
+        If you have a copy of your COE, you can email it or bring it into our office. If you have not received one yet, it may be on it’s way if you applied less than 30 days ago.  If you would like to request a new one, you can call the VA student line at <a href='1-888-442-4551'>1-888-442-4551</a>.  Please contact us if you have any questions.
+      </p>
+      <p>
+        We are also missing your official military transcripts; either the Joint Service Transcripts (JST) or Community College of the Air Force Transcripts (CCAF). The JST/CCAF  can be sent to UVU by going to <a href='https://jst.doded.mil/'>https://jst.doded.mil/</a> or <a href='https://www.airuniversity.af.edu/Barnes/CCAF/'>https://www.airuniversity.af.edu/Barnes/CCAF/</a> and sending them to UVU transcript office. The school must have official copies these transcripts before your classes can be certified for benefits.  If you have any questions or need any help with this reach out to us and we can assist you.
       </p>
 
       <p>Steps to submit the Joint Services Transcript (Army/Marines/Navy/CG):</p>
       <ol>
-        <li className={'hey'}>Please navigate to <a>https://jst.doded.mil/jst/ </a>in a web browser. If your browser displays a security warning, you can either click “Advanced” and then “Proceed” or use another browser.</li>
+        <li className={'hey'}>Please navigate to <a href='https://jst.doded.mil/jst/'>https://jst.doded.mil/jst/</a> in a web browser. If your browser displays a security warning, you can either click “Advanced” and then “Proceed” or use another browser.</li>
         <li className={'hey'}>Create an account or use a CAC to log in.</li>
         <li className={'hey'}>After logging in, choose option 5 and search for Utah Valley University. </li>
         <li className={'hey'}>Finally, check the box to consent to e-delivery and submit. This will officially deliver the transcript to the UVU Transfer Credit Office.</li>
@@ -209,10 +230,10 @@ function Response(props){
     <div>
       <p>Hello [ Student Name ]</p>
       <p>
-        I was reviewing your {semester} {year} veteran class schedule form and noticed that you are not listed as a Utah resident. Please contact the residency office as soon as possible to work to establish Utah Residency and be charged in-state tuition rates. They can be reached at 801-863-8706 or <a>residency@uvu.edu.</a>
+        I was reviewing your {semester} {year} veteran class schedule form and noticed that you are not listed as a Utah resident. Please contact the residency office as soon as possible to work to establish Utah Residency and be charged in-state tuition rates. They can be reached at <a href='801-863-8706'>801-863-8706</a> or <a href='residency@uvu.edu'>residency@uvu.edu</a>.
       </p>
       <p>
-        If you have a copy of your COE, you can email it or bring it into our office. If you have not received one yet, it may be on it’s way if you applied less than 30 days ago.  If you would like to request a new one, you can call the VA student line at 1-888-442-4551.  Please contact us if you have any questions.
+        If you have a copy of your COE, you can email it or bring it into our office. If you have not received one yet, it may be on it’s way if you applied less than 30 days ago.  If you would like to request a new one, you can call the VA student line at <a href='1-888-442-4551'>1-888-442-4551</a>. Please contact us if you have any questions.
       </p>
       <p>Respectivly,</p>
     </div>
@@ -222,20 +243,20 @@ function Response(props){
         <p>Hello [ Student Name ]</p>
 
         <p>
-          I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a>https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.
+          I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a href='https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction'>https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.
         </p>
         <p>
-          We are missing your Certificate of Eligibility (COE). This is a letter you receive in the mail from the VA after completing an application on <a>https://www.va.gov/education/how-to-apply/</a> explaining the benefits you are eligible for. If you have not applied yet, please do so.  
+          We are missing your Certificate of Eligibility (COE). This is a letter you receive in the mail from the VA after completing an application on <a href='https://www.va.gov/education/how-to-apply/'>https://www.va.gov/education/how-to-apply/</a> explaining the benefits you are eligible for. If you have not applied yet, please do so.  
         </p>
         <p>
-          If you have a copy of your COE, you can email it or bring it into our office. If you have not received one yet, it may be on it’s way if you applied less than 30 days ago.  If you would like to request a new one, you can call the VA student line at 1-888-442-4551.  Please contact us if you have any questions.
+          If you have a copy of your COE, you can email it or bring it into our office. If you have not received one yet, it may be on it’s way if you applied less than 30 days ago.  If you would like to request a new one, you can call the VA student line at <a href='1-888-442-4551'>1-888-442-4551</a>.  Please contact us if you have any questions.
         </p>
         <p>
-          We are also missing your official military transcripts; either the Joint Service Transcripts (JST) or Community College of the Air Force Transcripts (CCAF). The JST/CCAF  can be sent to UVU by going to https://jst.doded.mil/ or https://www.airuniversity.af.edu/Barnes/CCAF/ and sending them to UVU transcript office. The school must have official copies these transcripts before your classes can be certified for benefits.  If you have any questions or need any help with this reach out to us and we can assist you.
+          We are also missing your official military transcripts; either the Joint Service Transcripts (JST) or Community College of the Air Force Transcripts (CCAF). The JST/CCAF  can be sent to UVU by going to <a href='https://jst.doded.mil/'>https://jst.doded.mil/</a> or <a href='https://www.airuniversity.af.edu/Barnes/CCAF/'>https://www.airuniversity.af.edu/Barnes/CCAF/</a> and sending them to UVU transcript office. The school must have official copies these transcripts before your classes can be certified for benefits.  If you have any questions or need any help with this reach out to us and we can assist you.
         </p>
         <p>Steps to submit the Joint Services Transcript (Army/Marines/Navy/CG):</p>
         <ol>
-          <li className={'hey'}>Please navigate to <a>https://jst.doded.mil/jst/ </a>in a web browser. If your browser displays a security warning, you can either click “Advanced” and then “Proceed” or use another browser.</li>
+          <li className={'hey'}>Please navigate to <a href='https://jst.doded.mil/jst/'>https://jst.doded.mil/jst/</a> in a web browser. If your browser displays a security warning, you can either click “Advanced” and then “Proceed” or use another browser.</li>
           <li className={'hey'}>Create an account or use a CAC to log in.</li>
           <li className={'hey'}>After logging in, choose option 5 and search for Utah Valley University. </li>
           <li className={'hey'}>Finally, check the box to consent to e-delivery and submit. This will officially deliver the transcript to the UVU Transfer Credit Office.</li>
@@ -247,7 +268,7 @@ function Response(props){
       <div>
         <p>Hello [Student Name]</p>
         <p>
-          I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a>https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.
+          I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a href='https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction'>https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.
         </p>
       </div>
 
@@ -297,8 +318,6 @@ function Response(props){
     email = wolvrineTrack
   }
 
-  console.log(jst, certElg, majorMatch, residency)
-  console.log(note)
   return(
     <div>
       <div>
