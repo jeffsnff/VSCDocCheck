@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { MDBCol, MDBContainer, MDBRow } from 'mdbreact'
+import { MDBBtn, MDBCol, MDBContainer, MDBRow } from 'mdbreact'
 import Info from '../info/Info.js'
 import ChapterQuestions from '../chapterQuestions/ChapterQuestions.js'
 
@@ -47,6 +47,7 @@ function SemesterInfo() {
   }
 
   return(
+    
     <MDBContainer>
       <MDBCol style={{border: '1px solid green'}}>
         <MDBRow className='flex-center' >
@@ -80,9 +81,9 @@ function SemesterInfo() {
         </MDBRow>
       
           <MDBRow className="d-flex justify-content-around">
-          <button name='chapter' value='31' onClick={chapterSelected }>Chapter 31</button>
-          <button name='chapter' value='33' onClick={chapterSelected }>Chapter 33 & 1606 & 30</button>
-          <button name='chapter' value='toe' onClick={chapterSelected }>Chapter 33 TOE / 35 DEA / 35 FRY</button>
+          <MDBBtn name='chapter' value='31' onClick={chapterSelected }>Chapter 31</MDBBtn>
+          <MDBBtn name='chapter' value='33' onClick={chapterSelected }>Chapter 33 & 1606 & 30</MDBBtn>
+          <MDBBtn name='chapter' value='toe' onClick={chapterSelected }>Chapter 33 TOE / 35 DEA / 35 FRY</MDBBtn>
         </MDBRow>
         
         

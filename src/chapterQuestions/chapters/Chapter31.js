@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Response from '../responses/Response.js'
+import { MDBBtn } from 'mdbreact'
 
 function Chapter31(props){
 
@@ -49,10 +50,10 @@ function Chapter31(props){
             <label className="custom-control-label" for='majorMatch'>Major matches Wolverine Track</label>
           </div>
         </div>
-        <button>Submit</button>
+        <MDBBtn>Submit</MDBBtn>
         
       </form>
-      <button onClick={() => resetSelection()}>Reset</button>
+      <MDBBtn onClick={() => resetSelection()}>Reset</MDBBtn>
       <div>
         {
           toggle ? 

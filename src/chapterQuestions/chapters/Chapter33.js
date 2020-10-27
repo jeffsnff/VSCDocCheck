@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Response from '../responses/Response.js'
+import {MDBBtn} from 'mdbreact'
 
 function Chapter33(props){
   
@@ -55,9 +56,9 @@ function Chapter33(props){
         </div>
         
 
-        <button>Submit</button>
+        <MDBBtn>Submit</MDBBtn>
       </form>
-      <button onClick={() => resetSelection()}>Reset</button>
+      <MDBBtn onClick={() => resetSelection()}>Reset</MDBBtn>
       <div>
         {
           toggle ? 
