@@ -2,15 +2,15 @@ import React from 'react'
 
 function Response(props){
 
-  const { jst, residency, collegeCredit, majorMatch, certElg, initials, semester, year } = props
+  const { jst, residency, majorMatch, certElg, initials, semester, year } = props
   const today = (new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit'}).format(Date.now()))
   let note
   let email
   let emailSubject = `URGENT: Missing Documentation for ${semester} ${year} VA Education Benefits`
 
   const noteResponse = {
-    jst: `Document check- missing JST. Requested from stu by email-imaged. Major matches WT- moved to ${semester} ${year} prepped for cert. - ${initials}`,
     coe: `Document check- missing COE- requested from stu by email-imaged. Major matches WT- moved to ${semester} ${year} prepped for cert. - ${initials}`,
+    jst: `Document check- missing JST. Requested from stu by email-imaged. Major matches WT- moved to ${semester} ${year} prepped for cert. - ${initials}`,
     resident: `Document check- student is non-resident. Called student to establish residency and emphasized that the difference is approximately $5000 out of pocket. Major matches WT, moved to ${semester} ${year} prepped for cert. - ${initials}`,
     jstCOE: `Document check- missing JST and COE. Requested from stu by email-imaged. Major matches WT- moved to ${semester} ${year} prepped for cert. - ${initials}`,
     coeRes: `Document Check - Stu missing COE and Non-resident. Requested COE and informed them to call residency to get instate. -imaged ${initials}`,
@@ -163,14 +163,14 @@ function Response(props){
     const jstWTResident =
     <div>
       <p>Hello [ Student Name ]</p>
-      <p>I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a>https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.</p>
-      <p>I also noticed that you are not listed as a Utah resident. Please contact the residency office as soon as possible to work to establish Utah Residency and be charged in-state tuition rates. They can be reached at 801-863-8706 or <a>residency@uvu.edu.</a>  </p>
+      <p>I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a href='https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction'>https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.</p>
+      <p>I also noticed that you are not listed as a Utah resident. Please contact the residency office as soon as possible to work to establish Utah Residency and be charged in-state tuition rates. They can be reached at 801-863-8706 or <a href='residency@uvu.edu'>residency@uvu.edu.</a>  </p>
       <p>
-        We are also missing your official military transcripts; either the Joint Service Transcripts (JST) or Community College of the Air Force Transcripts (CCAF). The JST/CCAF  can be sent to UVU by going to https://jst.doded.mil/ or https://www.airuniversity.af.edu/Barnes/CCAF/ and sending them to UVU transcript office. The school must have official copies these transcripts before your classes can be certified for benefits.  If you have any questions or need any help with this reach out to us and we can assist you.
+        We are also missing your official military transcripts; either the Joint Service Transcripts (JST) or Community College of the Air Force Transcripts (CCAF). The JST/CCAF  can be sent to UVU by going to <a href='https://jst.doded.mil/ '>https://jst.doded.mil/</a> or <a href='https://www.airuniversity.af.edu/Barnes/CCAF/'>https://www.airuniversity.af.edu/Barnes/CCAF/ </a>and sending them to UVU transcript office. The school must have official copies these transcripts before your classes can be certified for benefits.  If you have any questions or need any help with this reach out to us and we can assist you.
       </p>
       <p>Steps to submit the Joint Services Transcript (Army/Marines/Navy/CG):</p>
       <ol>
-        <li className={'hey'}>Please navigate to <a>https://jst.doded.mil/jst/ </a>in a web browser. If your browser displays a security warning, you can either click “Advanced” and then “Proceed” or use another browser.</li>
+        <li className={'hey'}>Please navigate to <a href='https://jst.doded.mil/jst/'>https://jst.doded.mil/jst/</a>in a web browser. If your browser displays a security warning, you can either click “Advanced” and then “Proceed” or use another browser.</li>
         <li className={'hey'}>Create an account or use a CAC to log in.</li>
         <li className={'hey'}>After logging in, choose option 5 and search for Utah Valley University. </li>
         <li className={'hey'}>Finally, check the box to consent to e-delivery and submit. This will officially deliver the transcript to the UVU Transfer Credit Office.</li>
@@ -250,10 +250,8 @@ function Response(props){
           I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a>https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.
         </p>
       </div>
-  
+
   if(jst !== false && residency !== false && majorMatch !== false && certElg !== false){
-    note = noteResponse.allDocs
-  }else if(jst !== false && residency !== false && majorMatch !== false && collegeCredit !== false) {
     note = noteResponse.allDocs
   }else if(jst === false && residency === false && majorMatch === false && certElg === false){
     note = noteResponse.coeJSTwtResident
@@ -261,7 +259,7 @@ function Response(props){
   }else if(jst === false && residency === false && majorMatch === false){
     note = noteResponse.jstWTResident
     email = jstWTResident
-  }else if(certElg === false && jst === false && residency == false){
+  }else if(certElg === false && jst === false && residency === false){
     note = noteResponse.coeJSTRest
     email = coeJSTRest
   }else if(jst === false && certElg === false && majorMatch === false){
@@ -299,8 +297,8 @@ function Response(props){
     email = wolvrineTrack
   }
 
-  
-
+  console.log(jst, certElg, majorMatch, residency)
+  console.log(note)
   return(
     <div>
       <div>
