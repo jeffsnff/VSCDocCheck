@@ -58,20 +58,22 @@ function Chapter33(props){
 
         <MDBBtn onClick={handleSubmit}>Submit</MDBBtn>
       </form>
-      <MDBBtn onClick={resetSelection}>Reset</MDBBtn>
       <div>
         {
           toggle ? 
-            <Response
-              jst={thing.jst}
-              residency={thing.residency}
-              majorMatch={thing.majorMatch}
-              certElg={thing.certElg}
+            <div>
+              <MDBBtn color='yellow' onClick={resetSelection}>Reset</MDBBtn>
+              <Response
+                jst={thing.jst}
+                residency={thing.residency}
+                majorMatch={thing.majorMatch}
+                certElg={thing.certElg}
 
-              year={props.year}
-              semester={props.semester}
-              initials={props.initials}
-            />
+                year={props.year}
+                semester={props.semester}
+                initials={props.initials}
+              />
+            </div>
           :
           null
         }
