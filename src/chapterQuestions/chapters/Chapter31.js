@@ -34,7 +34,7 @@ function Chapter31(props){
 
   return(
     <div>
-      <h1>Chapter 31</h1>
+      <h4>Chapter 31</h4>
       <form onSubmit={handleSubmit}>
         <div className='d-flex flex-column'>
           <div className="custom-control custom-checkbox checkbox-xl">

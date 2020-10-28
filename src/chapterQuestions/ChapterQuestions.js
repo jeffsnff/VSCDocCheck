@@ -32,7 +32,7 @@ function ChapterQuestions(props) {
   
   return(
     <div>
-      <h1>QUESTIONS FOR CHAPTERS</h1>
+      {/* <h1>QUESTIONS FOR CHAPTERS</h1> */}
       {chapterRender()}
     </div>
   )
