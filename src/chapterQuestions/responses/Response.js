@@ -295,6 +295,9 @@ function Response(props){
 
   if(jst !== false && residency !== false && majorMatch !== false && certElg !== false){
     note = noteResponse.allDocs
+    emailSubject = null
+    email = null
+    
   }else if(jst === false && residency === false && majorMatch === false && certElg === false){
     note = noteResponse.coeJSTwtResident
     email = jstCOEwtResident
@@ -345,18 +348,36 @@ function Response(props){
   return(
     <div>
       <div>
-        <h4>Note</h4>
+        {/* <h4>Note</h4> */}
         <MDBBtn onClick={() => navigator.clipboard.writeText(today + ' ' + note)}>Note</MDBBtn>
         {today} {note}
       </div>
       <div>
-        <h4>Email Subject</h4>
-        <MDBBtn onClick={() => navigator.clipboard.writeText(emailSubject)}>Email Subject</MDBBtn>
-        {emailSubject}
-        <h4>Email</h4>
-        {/* <MDBBtn onClick={() => navigator.clipboard.writeText(email.div)}>Email</MDBBtn>
-        <MDBBtn onClick={() => console.log(email)}>Email Test</MDBBtn> */}
-        {email}
+
+        {
+          emailSubject  ?
+                          <div>
+                            {/* <h4>Email Subject</h4> */}
+                            <MDBBtn onClick={() => navigator.clipboard.writeText(emailSubject)}>Email Subject</MDBBtn>
+                            {emailSubject}
+                          </div>
+                        :
+                          null
+        }
+        
+        
+        {
+          email ? 
+                  <div>
+                    <h4>Email</h4>
+                    {/* <MDBBtn onClick={() => navigator.clipboard.writeText(email.div)}>Email</MDBBtn>
+                    <MDBBtn onClick={() => console.log(email)}>Email Test</MDBBtn> */}
+                    {email}
+                  </div>
+                :
+                null
+        }
+        
       </div>
     </div>
   )

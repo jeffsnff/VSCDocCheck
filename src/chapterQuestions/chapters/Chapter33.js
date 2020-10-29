@@ -36,7 +36,7 @@ function Chapter33(props){
 
   return(
     <div>
-      <h1>Chapter 33 & 1606 & 30</h1>
+      <h4>Chapter 33 & 1606 & 30</h4>
       <form onSubmit={handleSubmit}>
         <div className="custom-control custom-checkbox checkbox-xl">
           <input className="custom-control-input" id='certElg' type='checkbox' checked={thing.certElg} onChange={handleChange}></input>
@@ -58,20 +58,22 @@ function Chapter33(props){
 
         <MDBBtn onClick={handleSubmit}>Submit</MDBBtn>
       </form>
-      <MDBBtn onClick={resetSelection}>Reset</MDBBtn>
       <div>
         {
           toggle ? 
-            <Response
-              jst={thing.jst}
-              residency={thing.residency}
-              majorMatch={thing.majorMatch}
-              certElg={thing.certElg}
+            <div>
+              <MDBBtn color='yellow' onClick={resetSelection}>Reset</MDBBtn>
+              <Response
+                jst={thing.jst}
+                residency={thing.residency}
+                majorMatch={thing.majorMatch}
+                certElg={thing.certElg}
 
-              year={props.year}
-              semester={props.semester}
-              initials={props.initials}
-            />
+                year={props.year}
+                semester={props.semester}
+                initials={props.initials}
+              />
+            </div>
           :
           null
         }

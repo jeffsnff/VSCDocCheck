@@ -79,19 +79,15 @@ function SemesterInfo() {
             />
           </form>
         </MDBRow>
-      
           <MDBRow className="d-flex justify-content-around">
           <MDBBtn name='chapter' value='31' onClick={chapterSelected }>Chapter 31</MDBBtn>
           <MDBBtn name='chapter' value='33' onClick={chapterSelected }>Chapter 33 & 1606 & 30</MDBBtn>
           <MDBBtn name='chapter' value='toe' onClick={chapterSelected }>Chapter 33 TOE / 35 DEA / 35 FRY</MDBBtn>
         </MDBRow>
-        
-        
-          
-        
       </MDBCol>
 
       { 
+      // Displays info before button click. On button click, it hides info and shows the chapter questions.
         info ? 
             <Info
               

@@ -34,7 +34,7 @@ function Chapter31(props){
 
   return(
     <div>
-      <h1>Chapter 31</h1>
+      <h4>Chapter 31</h4>
       <form onSubmit={handleSubmit}>
         <div className='d-flex flex-column'>
           <div className="custom-control custom-checkbox checkbox-xl">
@@ -53,19 +53,23 @@ function Chapter31(props){
         <MDBBtn onClick={handleSubmit}>Submit</MDBBtn>
         
       </form>
-      <MDBBtn onClick={resetSelection}>Reset</MDBBtn>
+      
       <div>
         {
           toggle ? 
-            <Response
-              jst={thing.jst}
-              residency={thing.residency}
-              majorMatch={thing.majorMatch}
+            <div>
+              <MDBBtn color="yellow" onClick={resetSelection}>Reset</MDBBtn>
+              <Response
+                jst={thing.jst}
+                residency={thing.residency}
+                majorMatch={thing.majorMatch}
+                
+                year={props.year}
+                semester={props.semester}
+                initials={props.initials}
+              />
               
-              year={props.year}
-              semester={props.semester}
-              initials={props.initials}
-            />
+            </div>
           :
           null
         }
