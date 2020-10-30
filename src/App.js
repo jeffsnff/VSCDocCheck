@@ -5,11 +5,10 @@ import { MDBContainer } from 'mdbreact'
 function App() {
   return (
     <MDBContainer>
-      
-      <div>
-        <h1>Document Checks</h1>
+      <>
+        <h1 className="d-flex justify-content-center">Document Checks</h1>
         <SemesterInfo />
-      </div>
+      </>
     </MDBContainer>
   );
 }
