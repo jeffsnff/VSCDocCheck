@@ -4,12 +4,11 @@ import { MDBContainer } from 'mdbreact'
 
 function App() {
   return (
-    <MDBContainer style={{border: '1px solid red'}}>
+    <MDBContainer>
+      
       <div>
         <h1>Document Checks</h1>
-        <div>
-          <SemesterInfo />
-        </div>
+        <SemesterInfo />
       </div>
     </MDBContainer>
   );

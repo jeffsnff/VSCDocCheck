@@ -49,7 +49,7 @@ function SemesterInfo() {
   return(
     
     <MDBContainer>
-      <MDBCol style={{border: '1px solid green'}}>
+      <MDBCol>
         <MDBRow className='flex-center' >
           <form className="d-flex justify-content-center flex-md-row">
             <input 
