@@ -1,5 +1,5 @@
 import React from 'react'
-import { MDBBtn } from 'mdbreact'
+import { MDBBtn, MDBCard, MDBContainer, MDBListGroup, MDBListGroupItem } from 'mdbreact'
 
 function Response(props){
 
@@ -346,21 +346,23 @@ function Response(props){
   }
 
   return(
-    <div>
-      <div>
+    <MDBContainer>
+      <MDBCard>
+        <MDBListGroup>
+      <MDBListGroupItem>
         {/* <h4>Note</h4> */}
         <MDBBtn onClick={() => navigator.clipboard.writeText(today + ' ' + note)}>Note</MDBBtn>
         {today} {note}
-      </div>
-      <div>
+      </MDBListGroupItem>
+      
 
         {
           emailSubject  ?
-                          <div>
+                          <MDBListGroupItem>
                             {/* <h4>Email Subject</h4> */}
                             <MDBBtn onClick={() => navigator.clipboard.writeText(emailSubject)}>Email Subject</MDBBtn>
                             {emailSubject}
-                          </div>
+                          </MDBListGroupItem>
                         :
                           null
         }
@@ -368,18 +370,18 @@ function Response(props){
         
         {
           email ? 
-                  <div>
+                  <MDBListGroupItem>
                     <h4>Email</h4>
                     {/* <MDBBtn onClick={() => navigator.clipboard.writeText(email.div)}>Email</MDBBtn>
                     <MDBBtn onClick={() => console.log(email)}>Email Test</MDBBtn> */}
                     {email}
-                  </div>
+                  </MDBListGroupItem>
                 :
                 null
         }
-        
-      </div>
-    </div>
+        </MDBListGroup>
+      </MDBCard>
+    </MDBContainer>
   )
 }
 
