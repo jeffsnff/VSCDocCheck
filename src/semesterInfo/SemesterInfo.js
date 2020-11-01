@@ -80,9 +80,9 @@ function SemesterInfo() {
           </form>
         </MDBRow>
           <MDBRow className="d-flex justify-content-around">
-          <MDBBtn name='chapter' value='31' onClick={chapterSelected }>Chapter 31</MDBBtn>
-          <MDBBtn name='chapter' value='33' onClick={chapterSelected }>Chapter 33 & 1606 & 30</MDBBtn>
-          <MDBBtn name='chapter' value='toe' onClick={chapterSelected }>Chapter 33 TOE / 35 DEA / 35 FRY</MDBBtn>
+          <MDBBtn name='chapter' value='31' onClick={chapterSelected }>Chapter <br/> 31</MDBBtn>
+          <MDBBtn name='chapter' value='33' onClick={chapterSelected }>Chapter <br/>33 & 1606 & 30</MDBBtn>
+          <MDBBtn name='chapter' value='toe' onClick={chapterSelected }>Chapter <br/>33 TOE / 35 DEA / 35 FRY</MDBBtn>
         </MDBRow>
       </MDBCol>
 
