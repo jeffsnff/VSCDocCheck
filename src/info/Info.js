@@ -2,6 +2,7 @@ import React from 'react'
 import { MDBCard, MDBCardBody, MDBContainer } from 'mdbreact'
 
 function Info(){
+  // This page displays doc check information to user before they select a chapter.
   return(
     <MDBContainer>
       <MDBCard>

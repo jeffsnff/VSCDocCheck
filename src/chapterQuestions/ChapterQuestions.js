@@ -6,6 +6,7 @@ import ChapterToe from './chapters/ChapterToe.js'
 
 function ChapterQuestions(props) {
 
+  // Passed down from semesterInfo to render the chapter file
   const { chapterInfo } = props
 
   function chapterRender(){
@@ -32,7 +33,6 @@ function ChapterQuestions(props) {
   
   return(
     <div>
-      {/* <h1>QUESTIONS FOR CHAPTERS</h1> */}
       {chapterRender()}
     </div>
   )
