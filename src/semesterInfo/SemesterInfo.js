@@ -31,19 +31,19 @@ function SemesterInfo() {
 
   const chapterSelected = (e) => {
     e.preventDefault()
-    
-    if(info){
-      setInfo(prevInfo => !prevInfo)
+    if(userInfo.semester === null || userInfo.initials === null || userInfo.year === null){
+      alert("Please Enter Your Informatiuon in the Form")
+    }else{
+      if(info){
+        setInfo(prevInfo => !prevInfo)
+      }
+      const { value, name } = e.target
+        setChapter(prevChapter => ({
+              ...prevChapter, 
+              [name]: value
+            })
+        )
     }
-    
-    const { value, name } = e.target
-    setChapter(prevChapter => ({
-        ...prevChapter, 
-        [name]: value
-      })
-    )
-
-
   }
 
   return(
