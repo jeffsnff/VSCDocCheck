@@ -4,19 +4,23 @@ import Info from '../info/Info.js'
 import ChapterQuestions from '../chapterQuestions/ChapterQuestions.js'
 
 function SemesterInfo() {
+
   const initUser = { semester: '', year: '', initials: '' }
   const initChap = { chapter: ''}
+
   const [info, setInfo] = useState(true)
   const [ userInfo, setUserInfo ] = useState(initUser)
   const [chapter, setChapter] = useState(initChap)
 
   const onChange = e => {
     const { name, value } = e.target
+    // Saves user information to session storage
     setUserInfo(prevInfo => ({...prevInfo, [name]: value}))
     sessionStorage.setItem([name], [value])
   }
 
   useEffect( () => {
+    // Pulls user information from session storage
     const localSemester = sessionStorage.getItem('semester')
     const localYear = sessionStorage.getItem('year')
     const localInitials = sessionStorage.getItem('initials')
@@ -31,13 +35,17 @@ function SemesterInfo() {
 
   const chapterSelected = (e) => {
     e.preventDefault()
+
     if(userInfo.semester === null || userInfo.initials === null || userInfo.year === null){
       alert("Please Enter Your Informatiuon in the Form")
     }else{
+      // Turn info hook to false so that it hides the Info.js file
       if(info){
         setInfo(prevInfo => !prevInfo)
       }
       const { value, name } = e.target
+        // Sets chapter hook to button selected to pass down 
+        // through props to be used for rendering certain questions
         setChapter(prevChapter => ({
               ...prevChapter, 
               [name]: value
