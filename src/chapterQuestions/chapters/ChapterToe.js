@@ -40,15 +40,15 @@ function ChapterTOE(props){
       <form onSubmit={handleSubmit}>
         <div className="custom-control custom-checkbox checkbox-xl">
           <input className="custom-control-input" id='certElg' type='checkbox' checked={thing.certElg} onChange={handleChange}></input>
-          <label className="custom-control-label" for='certElg'>Certificate of Eligibility</label>
+          <label className="custom-control-label" htmlFor='certElg'>Certificate of Eligibility</label>
         </div>
         <div className="custom-control custom-checkbox checkbox-xl">
           <input className="custom-control-input" id='residency' type='checkbox' checked={thing.residency} onChange={handleChange}></input>
-          <label className="custom-control-label" for='residency'>Residency</label>
+          <label className="custom-control-label" htmlFor='residency'>Residency</label>
         </div>
         <div className="custom-control custom-checkbox checkbox-xl">
           <input className="custom-control-input" id='majorMatch' type='checkbox' checked={thing.majorMatch} onChange={handleChange}></input>
-          <label className="custom-control-label" for='majorMatch'>Major matches Wolverine Track</label>
+          <label className="custom-control-label" htmlFor='majorMatch'>Major matches Wolverine Track</label>
         </div>
         <MDBBtn onClick={handleSubmit}>Submit</MDBBtn>
       </form>

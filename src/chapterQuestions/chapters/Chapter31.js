@@ -39,15 +39,15 @@ function Chapter31(props){
         <div className='d-flex flex-column'>
           <div className="custom-control custom-checkbox checkbox-xl">
             <input className="custom-control-input" id='jst' type='checkbox' checked={thing.jst} onChange={handleChange}></input>
-            <label className="custom-control-label" for='jst'>Joint Service Transcripts / Military Credit</label>
+            <label className="custom-control-label" htmlFor='jst'>Joint Service Transcripts / Military Credit</label>
           </div>
           <div className="custom-control custom-checkbox checkbox-xl">
             <input className="custom-control-input" id='residency' type='checkbox' checked={thing.residency} onChange={handleChange}></input>
-            <label className="custom-control-label" for='residency'>Residency</label>
+            <label className="custom-control-label" htmlFor='residency'>Residency</label>
           </div>
           <div className="custom-control custom-checkbox checkbox-xl">
             <input className="custom-control-input" id='majorMatch' type='checkbox' checked={thing.majorMatch} onChange={handleChange}></input>
-            <label className="custom-control-label" for='majorMatch'>Major matches Wolverine Track</label>
+            <label className="custom-control-label" htmlFor='majorMatch'>Major matches Wolverine Track</label>
           </div>
         </div>
         <MDBBtn onClick={handleSubmit}>Submit</MDBBtn>
