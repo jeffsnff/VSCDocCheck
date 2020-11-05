@@ -13,7 +13,9 @@ function SemesterInfo() {
   const [chapter, setChapter] = useState(initChap)
 
   const onChange = e => {
+    
     const { name, value } = e.target
+    console.log(name, value)
     // Saves user information to session storage
     setUserInfo(prevInfo => ({...prevInfo, [name]: value}))
     sessionStorage.setItem([name], [value])
@@ -32,6 +34,13 @@ function SemesterInfo() {
       })
     )
   }, [])
+
+  const handleDropDown = e => {
+    const { name, value } = e.target
+      // Saves semester information to session storage
+      setUserInfo(prevInfo => ({...prevInfo, [name]: value}))
+      sessionStorage.setItem([name], [value])
+  }
 
   const chapterSelected = (e) => {
     e.preventDefault()
@@ -60,15 +69,27 @@ function SemesterInfo() {
       <MDBCol>
         <MDBRow className='flex-center' >
           <form className="d-flex justify-content-center flex-md-row">
-            <input 
+            {/* <input 
             type='text' 
             name='semester' 
             placeholder="Semester"
             className="form-control w-25 p-3"
             value={userInfo.semester}
             onChange={onChange}
-            required
-            />
+            required 
+            />*/}
+              <select className="browser-default custom-select"
+                type="text"
+                name="semester"
+                value={userInfo.semester}
+                onChange={handleDropDown}
+                label="Semester"
+              >
+                <option value="Semester">Semester</option>
+                <option value="Spring">Spring</option>
+                <option value="Fall">Fall</option>
+                <option value="Summer">Summer</option>
+              </select>
             <input 
             type='text' 
             name='year' 
@@ -88,7 +109,7 @@ function SemesterInfo() {
           </form>
         </MDBRow>
           <MDBRow className="d-flex justify-content-around">
-          <MDBBtn name='chapter' value='31' onClick={chapterSelected }>Chapter <br/> 31</MDBBtn>
+          <MDBBtn name='chapter' value='31' onClick={chapterSelected}>Chapter <br/> 31</MDBBtn>
           <MDBBtn name='chapter' value='33' onClick={chapterSelected }>Chapter <br/>33 & 1606 & 30</MDBBtn>
           <MDBBtn name='chapter' value='toe' onClick={chapterSelected }>Chapter <br/>33 TOE / 35 DEA / 35 FRY</MDBBtn>
         </MDBRow>
