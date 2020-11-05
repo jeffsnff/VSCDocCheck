@@ -71,7 +71,7 @@ function Chapter33(props){
 
                 year={props.year}
                 semester={props.semester}
-                initials={props.initials}
+                initial={props.initials}
               />
             </div>
           :

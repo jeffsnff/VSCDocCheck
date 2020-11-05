@@ -3,11 +3,12 @@ import { MDBBtn, MDBCard, MDBContainer, MDBListGroup, MDBListGroupItem } from 'm
 
 function Response(props){
 
-  const { jst, residency, majorMatch, certElg, initials, semester, year } = props
+  const { jst, residency, majorMatch, certElg, initial, semester, year } = props
   const today = (new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit'}).format(Date.now()))
   let note
   let email
   let emailSubject = `URGENT: Missing Documentation for ${semester} ${year} VA Education Benefits`
+  const initials = initial.toUpperCase()
 
   const noteResponse = {
     coe: `Document check- missing COE- requested from stu by email-imaged. Major matches WT- moved to ${semester} ${year} prepped for cert. - ${initials}`,
