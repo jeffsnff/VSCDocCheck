@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { MDBBtn, MDBCol, MDBContainer, MDBRow } from 'mdbreact'
+import { MDBAlert, MDBBtn, MDBCol, MDBContainer, MDBRow } from 'mdbreact'
 import Info from '../info/Info.js'
 import ChapterQuestions from '../chapterQuestions/ChapterQuestions.js'
 
@@ -113,6 +113,15 @@ function SemesterInfo() {
           <MDBBtn name='chapter' value='33' onClick={chapterSelected }>Chapter <br/>33 & 1606 & 30</MDBBtn>
           <MDBBtn name='chapter' value='toe' onClick={chapterSelected }>Chapter <br/>33 TOE / 35 DEA / 35 FRY</MDBBtn>
         </MDBRow>
+        <MDBContainer>
+        <MDBAlert color='warning' dismiss>
+          <h4>Attention Work Studies</h4>
+          <p>When you are doing document checks. When it is time to check Residency, please make sure that they have a <b>Utah State address</b> as well getting paid <b>In State Tuition</b></p>
+          <hr/>
+          <p>If you have any questions, please get in contact with Lauran, Spencer, or Cade and they will explain it to you.</p>
+          <p>Thank You</p>
+        </MDBAlert>
+        </MDBContainer>
       </MDBCol>
 
       { 
