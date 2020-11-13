@@ -116,7 +116,7 @@ function SemesterInfo() {
         <MDBContainer>
         <MDBAlert color='warning' dismiss>
           <h4>Attention Work Studies</h4>
-          <p>When you are doing document checks. When it is time to check Residency, please make sure that they have a <b>Utah State address</b> as well getting paid <b>In State Tuition</b></p>
+          <p>When you are doing document checks for Residency, please make sure that they have a <b>Utah State address</b> as well getting charged <b>In State Tuition</b></p>
           <hr/>
           <p>If you have any questions, please get in contact with Lauran, Spencer, or Cade and they will explain it to you.</p>
           <p>Thank You</p>
