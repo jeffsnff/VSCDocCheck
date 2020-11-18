@@ -69,21 +69,13 @@ function SemesterInfo() {
       <MDBCol>
         <MDBRow className='flex-center' >
           <form className="d-flex justify-content-center flex-md-row">
-            {/* <input 
-            type='text' 
-            name='semester' 
-            placeholder="Semester"
-            className="form-control w-25 p-3"
-            value={userInfo.semester}
-            onChange={onChange}
-            required 
-            />*/}
               <select className="browser-default custom-select"
                 type="text"
                 name="semester"
                 value={userInfo.semester}
                 onChange={handleDropDown}
                 label="Semester"
+                style={{width:'30%'}}
               >
                 <option hidden value="">Semester</option>
                 <option value="Spring">Spring</option>
@@ -91,15 +83,13 @@ function SemesterInfo() {
                 <option value="Summer">Summer</option>
               </select>
             <input 
-            type='number' 
+            type='text' 
+            pattern="[0-9]*"
             name='year' 
             placeholder='Year'
             className="form-control w-25 p-3"
             value={userInfo.year}
-            onChange={onChange}
-            min={2018}
-            max={2030}
-            
+            onChange={onChange}        
             />
             <input 
             type='text' 
