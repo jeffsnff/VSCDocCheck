@@ -85,18 +85,21 @@ function SemesterInfo() {
                 onChange={handleDropDown}
                 label="Semester"
               >
-                <option value="Semester">Semester</option>
+                <option hidden value="">Semester</option>
                 <option value="Spring">Spring</option>
                 <option value="Fall">Fall</option>
                 <option value="Summer">Summer</option>
               </select>
             <input 
-            type='text' 
+            type='number' 
             name='year' 
             placeholder='Year'
             className="form-control w-25 p-3"
             value={userInfo.year}
             onChange={onChange}
+            min={2018}
+            max={2030}
+            
             />
             <input 
             type='text' 
