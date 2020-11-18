@@ -85,7 +85,7 @@ function SemesterInfo() {
                 onChange={handleDropDown}
                 label="Semester"
               >
-                <option value="Semester">Semester</option>
+                <option hidden value="">Semester</option>
                 <option value="Spring">Spring</option>
                 <option value="Fall">Fall</option>
                 <option value="Summer">Summer</option>
