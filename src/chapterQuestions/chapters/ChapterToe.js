@@ -36,7 +36,7 @@ function ChapterTOE(props){
 
   return(
     <div>
-      <h4>Chapter 33 TOE & 35 DEA & 30 FRY</h4>
+      <h4>Chapter 33 TOE & 35 DEA & 35 FRY</h4>
       <form onSubmit={handleSubmit}>
         <div className="custom-control custom-checkbox checkbox-xl">
           <input className="custom-control-input" id='certElg' type='checkbox' checked={thing.certElg} onChange={handleChange}></input>
