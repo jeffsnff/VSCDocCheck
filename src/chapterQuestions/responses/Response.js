@@ -236,6 +236,9 @@ function Response(props){
         I was reviewing your {semester} {year} veteran class schedule form and noticed that you are not listed as a Utah resident. Please contact the residency office as soon as possible to work to establish Utah Residency and be charged in-state tuition rates. They can be reached at <a href='801-863-8706'>801-863-8706</a> or <a href='residency@uvu.edu'>residency@uvu.edu</a>.
       </p>
       <p>
+        We are also missing your COE. This is a letter you receive in the mail from the VA after completing an application on <a href='https://www.va.gov/education/how-to-apply/'>https://www.va.gov/education/how-to-apply/</a> explaining the benefits you are eligible for. If you have not applied yet, please do so.
+      </p>
+      <p>
         If you have a copy of your COE, you can email it or bring it into our office. If you have not received one yet, it may be on it’s way if you applied less than 30 days ago.  If you would like to request a new one, you can call the VA student line at <a href='1-888-442-4551'>1-888-442-4551</a>. Please contact us if you have any questions.
       </p>
       <p>Respectivly,</p>
@@ -272,6 +275,15 @@ function Response(props){
         <p>Hello [Student Name]</p>
         <p>
           I was reviewing your {semester} {year} veteran class schedule form and noticed that your degree in Wolverine Track does not match the degree you have on file with the Veteran Affairs. I need you go to <a href='https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction'>https://www.va.gov/education/apply-for-education-benefits/application/1995/introduction</a> so you can fill out a 1995 form with the Veteran Affairs and let them know that you have changed your degree major.
+        </p>
+        <p>
+          We are also missing your Certificate of Eligibility (COE). This is a letter you receive in the mail from the VA after completing an application on <a href='https://www.va.gov/education/how-to-apply/'>https://www.va.gov/education/how-to-apply/</a> explaining the benefits you are eligible for. If you have not applied yet, please do so.  
+        </p>
+        <p>
+          If you have a copy of your COE, you can email it or bring it into our office. If you have not received one yet, it may be on it’s way if you applied less than 30 days ago.  If you would like to request a new one, you can call the VA student line at <a href='1-888-442-4551'>1-888-442-4551</a>.  Please contact us if you have any questions.
+        </p>
+        <p>
+          Respectfully,
         </p>
       </div>
 
