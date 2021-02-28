@@ -66,6 +66,7 @@ function SemesterInfo() {
   return(
     
     <MDBContainer>
+      <h1 className="d-flex justify-content-center">Document Checks</h1>
       <MDBCol>
         <MDBRow className='flex-center' >
           <form className="d-flex justify-content-center flex-md-row">
@@ -107,13 +108,13 @@ function SemesterInfo() {
           <MDBBtn name='chapter' value='toe' onClick={chapterSelected }>Chapter <br/>33 TOE / 35 DEA / 35 FRY</MDBBtn>
         </MDBRow>
         <MDBContainer>
-        <MDBAlert color='warning' dismiss>
-          <h4>Attention Work Studies</h4>
-          <p>When you are doing document checks for Residency, please make sure that they have a <b>Utah State address</b> as well getting charged <b>In State Tuition</b></p>
-          <hr/>
-          <p>If you have any questions, please get in contact with Lauran, Spencer, or Cade and they will explain it to you.</p>
-          <p>Thank You</p>
-        </MDBAlert>
+          <MDBAlert color='warning' dismiss>
+            <h4>Attention Work Studies</h4>
+            <p>When you are doing document checks for Residency, please make sure that they have a <b>Utah State address</b> as well getting charged <b>In State Tuition</b></p>
+            <hr/>
+            <p>If you have any questions, please get in contact with Lauran, Spencer, or Cade and they will explain it to you.</p>
+            <p>Thank You</p>
+          </MDBAlert>
         </MDBContainer>
       </MDBCol>
 
