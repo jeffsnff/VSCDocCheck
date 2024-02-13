@@ -7,5 +7,10 @@ This website standadizes the replies from the workstudies to the students in ord
 ### Tools
 It is a fully frontend project that is built using React.js, and Bootstrap. 
 
+### Future Plans
+- My future plans for this site is to completely refactor it. I want to update it to the current React.js standard as of Feburary 2024 or when higher. </br>
+- I want to take away the Bootstrap Material Design CSS and code it myself. </br>
+- I want to improve the logic when using the checkboxes to generate the templates so it is easier to follow and clearner. </br>
+
 ### Link
 https://vscdoc.netlify.app/
