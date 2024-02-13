@@ -1,7 +1,5 @@
 ## Background
 While I was working at Utah Valley University in the Veteran Success office as a workstudy, I helped check student veteran documents to make sure they had everything they needed to start classes and get the GI Bill. We were working out of a Microsoft Word document that we had to make sure matched what the Head Counselor wanted us to check for. However, if the document, which every workstudy had their own copy, wasn't up to date the replies were all different.
-
-### Link
 https://vscdoc.netlify.app/
 
 ## What it does
