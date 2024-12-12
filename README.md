@@ -1,14 +1,50 @@
-## Background
-While I was working at Utah Valley University in the Veteran Success office as a workstudy, I helped check student veteran documents to make sure they had everything they needed to start classes and get the GI Bill. We were working out of a Microsoft Word document that we had to make sure matched what the Head Counselor wanted us to check for. However, if the document, which every workstudy had their own copy, wasn't up to date the replies were all different.</br>
-https://vscdoc.netlify.app/
+<a id="readme-top"></a>
 
-## What it does
-This website standadizes the replies from the workstudies to the students in order to have a clear understanding of what the office is asking for from the students. This allows the workstudies to know what the last workstudy has said to the student without misunderstanding the message. This has increased productivity and accuracy in the office by 15%
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="src/navbar/shield_vsc.png" alt="Logo" width="80" height="80">
+  </a>
+  <h1 align="center">Veteran Success Document Checker</h1>
 
-### Tools
-It is a fully frontend project that is built using React.js, and Bootstrap. 
+  <p align="center">
+    Document Checker Tool for UvU Veteran Students
+    <br />
+    <br />
+    <a href="https://vscdoc.netlify.app/">View Project</a>
+    ·
+    <a href="https://github.com/jeffsnff/VSCDocCheck/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    ·
+    <a href="https://github.com/jeffsnff/VSCDocCheck/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+  </p>
+</div>
 
-### Future Plans
-- My future plans for this site is to completely refactor it. I want to update it to the current React.js standard as of Feburary 2024 or when higher. </br>
-- I want to take away the Bootstrap Material Design CSS and code it myself. </br>
-- I want to improve the logic when using the checkboxes to generate the templates so it is easier to follow and clearner. </br>
+<!-- ABOUT THE PROJECT -->
+## About The Project
+Place holder text
+
+### Built With
+
+[![React][React.js]][React-url][![Bootstrap][Bootstrap.com]][Bootstrap-url]
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+This tool is used to help Veteran student works at Utah Valley University to check incoming students documents.
+The user inputs the semseter and year they are checking documents for and then their initials.
+Then they would select the Education Chapter the Veteran is using for UvU which then renders checkboxs for that Chapter.
+The user will then make selections and press Submit. This renders the note for the studnet profile, and the email subject and body that the user will email to the student.
+
+<!-- CONTACT -->
+## Contact
+
+Jeff - jeff@somemail.mozmail.com
+Project Link: [VSC Doc Check](https://github.com/jeffsnff/VSCDocCheck)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
