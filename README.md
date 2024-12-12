@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/jeffsnff/VSCDocCheck">
     <img src="src/navbar/shield_vsc.png" alt="Logo" width="80" height="80">
   </a>
   <h1 align="center">Veteran Success Document Checker</h1>
@@ -91,6 +91,14 @@ The user will then make selections and press Submit. This renders the note for t
 
 Jeff - jeff@somemail.mozmail.com
 Project Link: [VSC Doc Check](https://github.com/jeffsnff/VSCDocCheck)
+
+## Acknowledgments
+
+* [Img Shields](https://shields.io)
+* [README.md Template Creator](https://github.com/othneildrew/Best-README-Template)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
